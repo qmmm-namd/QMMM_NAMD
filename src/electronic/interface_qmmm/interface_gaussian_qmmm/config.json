@@ -1,0 +1,21 @@
+{
+    "files" : {
+        "param" : "param.json",
+        "inp" : "gaussian.gjf",
+        "out" : "gaussian.log",
+        "chk" : "gaussian.chk",
+        "qmchk" : "qm.chk",
+        "qmmmchk" : "qmmm.chk",
+        "config" : "config.json"
+    },
+
+    "dirs" : {
+        "chk" : "old_chk"
+    },
+
+    "param" : {
+        "head" : ""
+    },
+
+    "command" : "g16"
+}

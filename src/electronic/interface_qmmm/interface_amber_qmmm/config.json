@@ -1,0 +1,19 @@
+{
+    "files" : {
+        "inp" : "amber.in",
+        "top" : "amber.top",
+        "crd" : "amber.crd",
+        "force" : "forcedump.dat",
+        "out" : "amber.out",
+        "config" : "config.json"
+    },
+
+    "dic_keys" : {
+        "vdw" : "VDW",
+        "ele" : "ELE",
+        "bonded" : "BONDED",
+        "tot"  : "TOT"
+    },
+    
+    "command" : "sander"
+}

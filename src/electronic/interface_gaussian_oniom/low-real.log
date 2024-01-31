@@ -1,0 +1,260 @@
+ Entering Gaussian System, Link 0=g09
+ Input=low-real.gjf
+ Output=low-real.log
+ Initial command:
+ /opt/g09_D01_em64t/g09/l1.exe "/tmp/Gau-2344.inp" -scrdir="/tmp/"
+ Entering Link 1 = /opt/g09_D01_em64t/g09/l1.exe PID=      2345.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
+                24-Mar-2015 
+ ******************************************
+ %chk=onlyinputfiles.chk
+ %mem=1GB
+ %nproc=2
+ Will use up to    2 processors via shared memory.
+ %nproclinda=1
+ Will use up to    1 processors via Linda.
+ --------------------------------------
+ #P force IOp(2/15=1,5/32=2,5/38=1) UFF
+ --------------------------------------
+ 1/10=10,18=10,30=1,38=1,56=1,64=2/1;
+ 2/12=2,15=1,17=6,18=5,29=2,40=1/2;
+ 3/5=30,11=9,16=1,25=1,30=1,41=10200000,43=2,71=1/1;
+ 4/20=10,22=1,24=3/2;
+ 7/7=1,44=-1/16;
+ 99/12=1/99;
+ Leave Link    1 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l101.exe)
+ -------------------------------------------
+ ch2nh2 Point 3 -- low level on real system.
+ -------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ O-O_3--0.834000      -2.39687   0.38312   0.11121 
+ H-H_-0.417000        -1.24301   0.20673   0.16045 
+ H-H_-0.417000        -2.84455   0.14332   1.10134 
+ O-O_3--0.834000      -2.40351  -0.09931  -0.82372 
+ H-H_-0.417000        -0.36219   0.36384  -0.69487 
+ H-H_-0.417000        -1.01781   0.96136   0.8666 
+ 
+ NAtoms=      6 NQM=        6 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2           3           4           5           6
+ IAtWgt=          16           1           1          16           1           1
+ AtmWgt=  15.9949146   1.0078250   1.0078250  15.9949146   1.0078250   1.0078250
+ NucSpn=           0           1           1           0           1           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   2.7928460   2.7928460   0.0000000   2.7928460   2.7928460
+ AtZNuc=   8.0000000   1.0000000   1.0000000   8.0000000   1.0000000   1.0000000
+ Generating MM parameters.
+ I=    1 IAn=  8 Valence= 4.
+          JB=  1 J=    3 IAn=  1 IBT= 1 Dist= 1.11D+00
+          JB=  2 J=    4 IAn=  8 IBT= 3 Dist= 1.05D+00
+ I=    4 IAn=  8 Valence= 3.
+          JB=  1 J=    1 IAn=  8 IBT= 3 Dist= 1.05D+00
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+ MMInit generated parameter data with length LenPar=         553.
+ MM Charge=              0.0000 electrons
+ MM Dipole moment (Debye):
+    X=              8.2785    Y=              2.2185    Z=              5.7255  Tot=             10.3071
+ MM Quadrupole moment (Debye-Ang):
+   XX=            -24.5159   YY=              1.6155   ZZ=              2.1847
+   XY=             -0.8326   XZ=            -14.7999   YZ=              1.0465
+ MM Traceless Quadrupole moment (Debye-Ang):
+   XX=            -17.6107   YY=              8.5208   ZZ=              9.0899
+   XY=             -0.8326   XZ=            -14.7999   YZ=              1.0465
+ MM Octapole moment (Debye-Ang**2):
+  XXX=             58.6266  YYY=              1.6783  ZZZ=              5.5488  XYY=             -0.6993
+  XXY=             -1.4662  XXZ=             36.4637  XZZ=             -2.2044  YZZ=              2.4077
+  YYZ=              1.4461  XYZ=             -1.3002
+ MM Hexadecapole moment (Debye-Ang**3):
+ XXXX=           -127.7955 YYYY=              1.6637 ZZZZ=              2.6998 XXXY=              6.1426
+ XXXZ=            -92.8347 YYYX=             -1.3545 YYYZ=              1.4562 ZZZX=            -14.0726
+ ZZZY=              1.1694 XXYY=             -1.1886 XXZZ=              5.4361 YYZZ=              1.5362
+ XXYZ=              1.4494 YYXZ=             -1.6335 ZZXY=             -3.2062
+ Leave Link  101 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.2
+ (Enter /opt/g09_D01_em64t/g09/l202.exe)
+ ---------------------------------------------------------------------------------------------------
+                            Z-MATRIX (ANGSTROMS AND DEGREES)
+   CD    Cent   Atom    N1       Length/X        N2       Alpha/Y        N3        Beta/Z          J
+ ---------------------------------------------------------------------------------------------------
+      1      1  O        0  -2.396866          0.383122          0.111211
+      2      2  H        0  -1.243006          0.206726          0.160448
+      3      3  H        0  -2.844548          0.143319          1.101336
+      4      4  O        0  -2.403509         -0.099306         -0.823720
+      5      5  H        0  -0.362192          0.363838         -0.694866
+      6      6  H        0  -1.017807          0.961356          0.866597
+ ---------------------------------------------------------------------------------------------------
+                         Z-Matrix orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8    10081003       -2.396866    0.383122    0.111211
+      2          1    10011000       -1.243006    0.206726    0.160448
+      3          1    10011000       -2.844548    0.143319    1.101336
+      4          8    10081003       -2.403509   -0.099306   -0.823720
+      5          1    10011000       -0.362192    0.363838   -0.694866
+      6          1    10011000       -1.017807    0.961356    0.866597
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  O    0.000000
+     2  H    1.168303   0.000000
+     3  H    1.112778   1.858556   0.000000
+     4  O    1.052082   1.552098   1.989780   0.000000
+     5  H    2.188613   1.237772   3.071981   2.097160   0.000000
+     6  H    1.675340   1.057747   2.015260   2.429474   1.795836
+                    6
+     6  H    0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    H4O2
+ Framework group  C1[X(H4O2)]
+ Deg. of freedom    12
+ Full point group                 C1      NOp   1
+ Rotational constants (GHZ):     67.4545861     37.6634258     25.0828719
+ Leave Link  202 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l301.exe)
+ Standard basis: Dummy (5D, 7F)
+     6 basis functions,     6 primitive gaussians,     6 cartesian basis functions
+     4 alpha electrons        4 beta electrons
+       nuclear repulsion energy         9.0803273764 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      0 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    6 NActive=    6 NUniq=    6 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ Leave Link  301 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l402.exe)
+ UFF calculation of energy and first derivatives.
+ Energy per function type:
+ Direct Coulomb + vdW (small)                           0.010844656
+ Direct Coulomb (large)                                -0.203864055
+ Direct vdW (large)                                   227.179627857
+ Non-direct Coulomb + vdW (small)                       0.000000000
+ Non-direct Coulomb (large)                            -0.091976240
+ Non-direct vdW (large)                              -199.488930824
+ Harmonic stretch III                                   0.023445633
+ UFF 3-term bend                                        0.051961002
+ Energy per function class:
+        Coulomb              -0.295840295
+    Vanderwaals              27.701541688
+     Stretching               0.023445633
+        Bending               0.051961002
+ Energy=     27.4811080     NIter=   0.
+ Dipole moment=       3.257023       0.872811       2.252570
+ Leave Link  402 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.1
+ (Enter /opt/g09_D01_em64t/g09/l716.exe)
+ Dipole        = 3.25702324D+00 8.72811474D-01 2.25256951D+00
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        8         -72.427757601   10.958651047   -3.119230963
+      2        1          51.495556017  -62.850288096  -37.192683589
+      3        1          -0.063402619   -0.056544038   -0.098611001
+      4        8          -1.365895139   -0.474961235   -1.204749155
+      5        1           6.634073116    1.150203421   -6.474031990
+      6        1          15.727426226   51.272938901   48.089306697
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max    72.427757601 RMS    32.180482907
+ Leave Link  716 at Tue Mar 24 20:17:01 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l9999.exe)
+
+ Test job not archived.
+ 1\1\GINC-EAM\Force\RUFF\ZDO\H4O2\DULIKAI\24-Mar-2015\0\\#P force IOp(2
+ /15=1,5/32=2,5/38=1) UFF\\ch2nh2 Point 3 -- low level on real system.\
+ \0,1\O,-2.39686552,0.38312217,0.11121069\H,-1.24300588,0.20672591,0.16
+ 044778\H,-2.84454833,0.14331878,1.10133648\O,-2.40350883,-0.09930598,-
+ 0.82372\H,-0.3621921,0.363838,-0.69486638\H,-1.01780703,0.96135626,0.8
+ 6659694\\Version=EM64L-G09RevD.01\HF=27.481108\RMSD=0.000e+00\RMSF=3.2
+ 18e+01\Dipole=3.2570232,0.8728115,2.2525695\PG=C01 [X(H4O2)]\\@
+
+
+ A successful marriage requires falling in love
+ many times, always with the same person.
+                           -- Mignon McLaughlin
+ Job cpu time:       0 days  0 hours  0 minutes  0.5 seconds.
+ File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      3 Scr=      1
+ Normal termination of Gaussian 09 at Tue Mar 24 20:17:01 2015.

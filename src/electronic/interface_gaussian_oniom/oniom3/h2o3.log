@@ -1,0 +1,436 @@
+ Entering Gaussian System, Link 0=g09
+ Input=h2o3.gjf
+ Output=h2o3.log
+ Initial command:
+ /opt/g09_D01_em64t/g09/l1.exe "/tmp/Gau-8864.inp" -scrdir="/tmp/"
+ Entering Link 1 = /opt/g09_D01_em64t/g09/l1.exe PID=      8865.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
+                21-Mar-2015 
+ ******************************************
+ %chk=h2o3.chk
+ ----------------------------------------------------------------------
+ # oniom(td/b3lyp/6-31g(d):pm6:uff)=(embed,onlyinputfiles) geom=connect
+ ivity
+ ----------------------------------------------------------------------
+ 1/38=1,52=13,56=1,57=2,61=3,64=2,74=500/1;
+ 2/12=2,17=6,18=5,40=1/2;
+ 1/38=1,52=13,53=6172,61=3,64=2,74=500,118=2/20;
+ 1/52=13,53=5062,61=3,74=500,118=2/20;
+ 1/52=13,53=4052,61=3,74=500,118=2/20;
+ 1/52=13,53=3042,61=3,64=2,74=500,118=2/20;
+ 1/52=13,53=2032,61=3,74=500,118=2/20;
+ 1/52=13,53=1022,61=3,64=2,74=500,118=2/20;
+ 99/5=1,9=1/99;
+ -------------------
+ Title Card Required
+ -------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1 for low   level calculation on real  system.
+ Charge =  0 Multiplicity = 1 for med   level calculation on mid   system.
+ Charge =  0 Multiplicity = 1 for low   level calculation on mid   system.
+ Charge =  0 Multiplicity = 1 for high  level calculation on model system.
+ Charge =  0 Multiplicity = 1 for med   level calculation on model system.
+ Charge =  0 Multiplicity = 1 for low   level calculation on model system.
+ O-O_3--0.834000      0    -2.86581   1.39268   0.       H 
+ H-H_-0.417000        0    -1.90581   1.39292   0.       H 
+ H-H_-0.417000        0    -3.18603   2.29769   0.       H 
+ O-O_3--0.834000      0    -2.02357   3.11642   2.10449  M 
+ H-H_-0.417000        0    -1.06357   3.11666   2.10449  M 
+ H-H_-0.417000        0    -2.34379   4.02144   2.10449  M 
+ O-O_3--0.834000      0    -3.12199   4.08527   0.24124  L 
+ H-H_-0.417000        0    -2.16199   4.08551   0.24124  L 
+ H-H_-0.417000        0    -3.44222   4.99028   0.24124  L 
+ 
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+ Layer 1 (S) has      3 atoms and charge   0.00000000 sum=   0.00000000
+ Layer 2 (M) adds     3 atoms and charge   0.00000000 sum=   0.00000000
+ Layer 3 (R) adds     3 atoms and charge   0.00000000 sum=   0.00000000
+ MMInit generated parameter data with length LenPar=         799.
+ MM Charge=              0.0000 electrons
+ MM Dipole moment (Debye):
+    X=              3.8443    Y=              5.4395    Z=              0.0000  Tot=              6.6608
+ MM Quadrupole moment (Debye-Ang):
+   XX=            -14.3780   YY=             36.0877   ZZ=              0.0000
+   XY=             -5.2530   XZ=              3.0059   YZ=              4.2532
+ MM Traceless Quadrupole moment (Debye-Ang):
+   XX=            -21.6146   YY=             28.8511   ZZ=             -7.2366
+   XY=             -5.2530   XZ=              3.0059   YZ=              4.2532
+ MM Octapole moment (Debye-Ang**2):
+  XXX=             40.6013  YYY=            200.9133  ZZZ=              0.0000  XYY=            -71.9646
+  XXY=              8.3928  XXZ=             -8.0325  XZZ=              5.7499  YZZ=              8.1359
+  YYZ=             31.2054  XYZ=             -0.7806
+ MM Hexadecapole moment (Debye-Ang**3):
+ XXXX=            -97.1557 YYYY=           1067.6355 ZZZZ=              0.0000 XXXY=            -36.9969
+ XXXZ=             15.3281 YYYX=           -480.5747 YYYZ=            173.6898 ZZZX=             11.9616
+ ZZZY=             16.9252 XXYY=            193.9234 XXZZ=            -14.2299 YYZZ=             58.2751
+ XXYZ=             -0.2841 YYXZ=            -46.1399 ZZXY=             -1.1907
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8    10081003       -2.865807    1.392678    0.000000
+      2          1    10011000       -1.905807    1.392919    0.000000
+      3          1    10011000       -3.186035    2.297695    0.000000
+      4          8    10081003       -2.023566    3.116421    2.104491
+      5          1    10011000       -1.063566    3.116662    2.104491
+      6          1    10011000       -2.343793    4.021438    2.104491
+      7          8    10081003       -3.121994    4.085268    0.241243
+      8          1    10011000       -2.161994    4.085509    0.241243
+      9          1    10011000       -3.442221    4.990284    0.241243
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  O    0.000000
+     2  H    0.960000   0.000000
+     3  H    0.960000   1.567673   0.000000
+     4  O    2.847726   2.722721   2.539789   0.000000
+     5  H    3.263292   2.847726   3.099107   0.960000   0.000000
+     6  H    3.407603   3.395559   2.847726   0.960000   1.567673
+     7  O    2.715487   2.964127   1.804915   2.370000   2.940581
+     8  H    2.793723   2.715487   2.074400   2.104753   2.370000
+     9  H    3.651468   3.919158   2.715487   2.999273   3.555299
+                    6          7          8          9
+     6  H    0.000000
+     7  O    2.020238   0.000000
+     8  H    1.873192   0.960000   0.000000
+     9  H    2.370000   0.960000   1.567673   0.000000
+ Stoichiometry    H6O3
+ Framework group  C1[X(H6O3)]
+ Deg. of freedom    21
+ Full point group                 C1      NOp   1
+ Largest Abelian subgroup         C1      NOp   1
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8    10081003        1.762610   -0.084077   -0.081292
+      2          1    10011000        1.636357   -0.561376    0.742022
+      3          1    10011000        1.030089    0.521719   -0.215550
+      4          8    10081003       -0.876062   -1.154195   -0.123727
+      5          1    10011000       -1.002315   -1.631494    0.699587
+      6          1    10011000       -1.608583   -0.548400   -0.257986
+      7          8    10081003       -0.628915    1.199723   -0.001698
+      8          1    10011000       -0.755168    0.722424    0.821616
+      9          1    10011000       -1.361436    1.805518   -0.135957
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):      9.3653226      6.3005110      3.8903107
+ ONIOM: saving gridpoint 17
+ ONIOM: generating point  6 -- low level on real system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ Title Card Required
+ Point  6 -- low level on real system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-O_3--0.834000                                  -0.876062282318     -1.154194856846     -0.123726908297
+  H-H_-0.417000                                    -1.002314594646     -1.631493817203      0.699587160940
+  H-H_-0.417000                                    -1.608583092857     -0.548399612802     -0.257985521244
+  O-O_3--0.834000                                  -0.628915390907      1.199722594224     -0.001698038569
+  H-H_-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-H_-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  6
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  5 -- med level on mid system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) PM6
+
+ Title Card Required
+ Point  5 -- med level on mid system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-O_3--0.834000                                  -0.876062282318     -1.154194856846     -0.123726908297
+  H-H_-0.417000                                    -1.002314594646     -1.631493817203      0.699587160940
+  H-H_-0.417000                                    -1.608583092857     -0.548399612802     -0.257985521244
+  O-#6--0.834000                                   -0.628915390907      1.199722594224     -0.001698038569
+  H-#6-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-#6-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  5
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  4 -- high level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) TD/B3LYP/6-31G(D)
+
+ Title Card Required
+ Point  4 -- high level on model system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-#1                                             -0.876062282318     -1.154194856846     -0.123726908297
+  H-#1                                             -1.002314594646     -1.631493817203      0.699587160940
+  H-#1                                             -1.608583092857     -0.548399612802     -0.257985521244
+  O-#6--0.834000                                   -0.628915390907      1.199722594224     -0.001698038569
+  H-#6-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-#6-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  4
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  3 -- low level on mid system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+ Generating MM parameters for model system.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+       3 point charges sum to:      0.00000000
+ MMInit generated parameter data with length LenPar=         703.
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ Title Card Required
+ Point  3 -- low level on mid system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-O_3--0.834000                                  -0.876062282318     -1.154194856846     -0.123726908297
+  H-H_-0.417000                                    -1.002314594646     -1.631493817203      0.699587160940
+  H-H_-0.417000                                    -1.608583092857     -0.548399612802     -0.257985521244
+  O-#6--0.834000                                   -0.628915390907      1.199722594224     -0.001698038569
+  H-#6-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-#6-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  3
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  2 -- med level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) PM6
+
+ Title Card Required
+ Point  2 -- med level on model system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-#1                                             -0.876062282318     -1.154194856846     -0.123726908297
+  H-#1                                             -1.002314594646     -1.631493817203      0.699587160940
+  H-#1                                             -1.608583092857     -0.548399612802     -0.257985521244
+  O-#6--0.834000                                   -0.628915390907      1.199722594224     -0.001698038569
+  H-#6-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-#6-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  2
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  1 -- low level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+ Generating MM parameters for model system.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+       3 point charges sum to:      0.00000000
+ MMInit generated parameter data with length LenPar=         607.
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ Title Card Required
+ Point  1 -- low level on model system.
+
+ 0,1
+  O-O_3--0.834000                                   1.762609611797     -0.084076623471     -0.081291690331
+  H-H_-0.417000                                     1.636357299468     -0.561375583828      0.742022378905
+  H-H_-0.417000                                     1.030088801257      0.521718620573     -0.215550303279
+  O-#1                                             -0.876062282318     -1.154194856846     -0.123726908297
+  H-#1                                             -1.002314594646     -1.631493817203      0.699587160940
+  H-#1                                             -1.608583092857     -0.548399612802     -0.257985521244
+  O-#6--0.834000                                   -0.628915390907      1.199722594224     -0.001698038569
+  H-#6-0.417000                                    -0.755167711794      0.722423638801      0.821616032219
+  H-#6-0.417000                                    -1.361436210005      1.805517843203     -0.135956649966
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 7 8 1.000 9 1.000
+ 8 7 1.000
+ 9 7 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ 1\1\GINC-EAM\SP\ONIOM(B3LYP TD-FC/6-31G(d):PM6:UFF)\Mixed\H6O3\DULIKAI
+ \21-Mar-2015\0\\# oniom(td/b3lyp/6-31g(d):pm6:uff)=(embed,onlyinputfil
+ es) geom=connectivity\\Title Card Required\\0,1\O,0,-2.86580727,1.3926
+ 7837,0.\H,0,-1.9058073,1.39291947,0.\H,0,-3.18603457,2.29769465,0.\O,0
+ ,-2.02356595,3.11642139,2.10449108\H,0,-1.06356598,3.11666249,2.104491
+ 08\H,0,-2.34379325,4.02143767,2.10449108\O,0,-3.12199382,4.08526776,0.
+ 24124313\H,0,-2.16199385,4.08550887,0.24124313\H,0,-3.44222112,4.99028
+ 405,0.24124313\\Version=EM64L-G09RevD.01\HF=0.\RMSD=0.000e+00\PG=C01 [
+ X(H6O3)]\\@
+
+
+ EVERYTHING'S GOT A MORAL, IF ONLY YOU CAN FIND IT.
+
+                                    -- LEWIS CARROL, ALICE IN WONDERLAND
+ Job cpu time:       0 days  0 hours  0 minutes  0.2 seconds.
+ File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 09 at Sat Mar 21 22:31:23 2015.

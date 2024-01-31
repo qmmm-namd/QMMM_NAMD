@@ -1,0 +1,578 @@
+#!/usr/bin/env python3 
+import os
+import shutil 
+import copy
+from os import path 
+from os import mkdir
+import numpy as np 
+
+from interface_mndo_qmmm import mndo
+from interface_amber_qmmm import amber
+from interface_molpro_qmmm import molpro
+from interface_gaussian_qmmm import gaussian 
+from interface_bagel_qmmm import bagel
+
+from tools_qmmm import *
+import group, qmmm_inp
+from additive import qmmm_vars, LA
+
+
+class additive:
+    def __init__(self):
+        self.vars = qmmm_vars.vars()
+        self.inp = qmmm_inp.inp()
+        self.inp.read_inp()
+
+        
+        # load group index 
+        if self.inp.qmmm_label_qm == 1:
+            self.group = group.group(qm=True)
+        else:
+            self.group = group.group(group_file=self.vars.group_file)
+            self.group.make(top=self.vars.QM_MM_top_file)
+
+
+        # remove the result file made in last process
+        if path.exists(self.vars.result):
+            os.remove(self.vars.result)
+        
+        # initialize variables of region, with respond to qm atoms, mm atoms, qm and mm atoms
+        self.qm_region_element, self.qm_region = [], []
+        self.mm_region_element, self.mm_region = [], []
+        self.qm_mm_region_element, self.qm_mm_region = [], []
+
+        # load charge of mm region
+        if self.inp.qmmm_label_qm != 1:
+            self.mm_charge = chargetool.amber_charge(self.vars.MM_top_file)
+        else: self.mm_charge = []
+
+
+        # initialize qm and mm launchers
+        self.qm = None
+        self.mm_mm = None 
+        self.mm_qm = None 
+        self.mm_qm_mm = None 
+
+        # initialize qm and mm terms (energy, gradient and nac)
+        self.qm_term = None 
+        self.mm_mm_term = None 
+        self.mm_qm_term = None 
+        self.mm_qm_mm_term = None 
+
+        self.n_state = 1
+        self.current_state = 1
+
+        self.param = {}
+
+        self.gradient = {}
+        self.nac = {}
+        self.energy = {}
+
+        return 
+
+
+    def make_dirs(self):
+        # make directory for every work spaces above 
+        os.chdir(self.vars.root)
+        try:
+            mkdir(self.vars.home)
+        except FileExistsError:
+            try:
+                shutil.rmtree(self.vars.home)
+                mkdir(self.vars.home)
+            except OSError:
+                pass 
+
+        mkdir(self.vars.QMdir)
+        mkdir(self.vars.MMdir)
+
+        for d in self.vars.workdirs:
+            mkdir(d)
+
+        return 
+
+
+    def read_interface(self):
+        with open(self.vars.interface) as interface:
+            for i in range(6):
+                interface.readline()
+
+            for line in interface:
+                if line.strip()[0] == '-':
+                    break 
+                tmp_list = line.strip().split()
+                self.qm_mm_region_element.append(tmp_list[0])
+                # atomic unit
+                self.qm_mm_region.append(list(map(float,tmp_list[-3:])))
+
+            for line in interface:
+                if 'Number of states involved in the dynamics:' in line:
+                    self.n_state = int(line.strip().split()[-1])
+
+                elif 'Current state:' in line:
+                    self.current_state = int(line.strip().split()[-1])
+
+            self.atom_num = len(self.qm_mm_region)
+            self.atom_num_qm = len(self.group.QM)
+            self.atom_num_mm = len(self.group.MM)
+            print(self.atom_num, self.atom_num_qm, self.atom_num_mm)
+            assert self.atom_num == self.atom_num_mm + self.atom_num_qm
+
+        print('Number of atoms : ', self.atom_num)
+        print('Number of QM atoms : ', self.atom_num_qm)
+        print('Number of MM atoms : ', self.atom_num_mm)
+        print('current state : ', self.current_state)
+        print('Number of states :  ', self.n_state)
+
+        return self.qm_mm_region_element, self.qm_mm_region
+
+
+    def make_region(self):
+        # make qm region and mm region
+        self.qm_region_element = [self.qm_mm_region_element[x-1] for x in self.group.QM]
+        self.qm_region = [self.qm_mm_region[x-1] for x in self.group.QM]
+
+        self.mm_region_element = [self.qm_mm_region_element[x-1] for x in self.group.MM]
+        self.mm_region = [self.qm_mm_region[x-1] for x in self.group.MM]
+
+        return 
+
+
+    def lancher(self):
+        # add link atoms and redistribute the charge
+        print()
+        print('qm length (before) : ', len(self.qm_region), end='\t')
+        print('charge length (before) : ', len(self.mm_charge), len(self.mm_region))
+        if self.inp.label_LA == 1:
+            self.LA = LA.LA(group=self.group, inp=self.inp, qm_mm_region=self.qm_mm_region, vars=self.vars)
+            qm_region_ele, qm_region = self.LA.add_LA(qm_region=self.qm_region, qm_element=self.qm_region_element)
+ 
+            # # redistribute point charges
+            mm_region, mm_charge = self.LA.redistribute_charge(mm_charge=self.mm_charge, mm_region=self.mm_region)
+
+        else:
+            qm_region = self.qm_region
+            qm_region_ele = self.qm_region_element
+            mm_region = self.mm_region
+            mm_charge = self.mm_charge
+            
+        print('qm length (after) : ', len(qm_region), end='\t')
+        print('charge length (after) : ', len(mm_region), len(mm_charge), '\n')
+
+
+        nac = True
+        # mndo
+        if self.inp.qm_method == 1:
+            if self.inp.qmmm_nac == 2 and self.inp.label_qmmm_bomd != 1:
+                print('nonadabatic coupling will be generated in only QM region!')
+                assert path.exists(self.vars.qm_nac_template)
+                self.qm_qm = mndo.mndo(qm_coord=qm_region, qm_element=qm_region_ele, mm_coord=[], mm_charge=[], \
+                    inp=self.inp, template=self.vars.qm_nac_template, vars=self.vars, nac=nac)
+                nac = False
+
+            self.qm_qmmm = mndo.mndo(qm_coord=qm_region, qm_element=qm_region_ele, mm_coord=mm_region, mm_charge=mm_charge, \
+                inp=self.inp, vars=self.vars, template=self.vars.qm_template, \
+                    nac=nac)
+
+        # molpro
+        elif self.inp.qm_method in [2, 4]:
+            if self.inp.qmmm_nac == 2 and self.inp.label_qmmm_bomd != 1:
+                print('nonadabatic coupling will be generated in only QM region!')
+                assert path.exists(self.vars.qm_nac_template)
+                self.qm_qm = molpro.molpro(qm_coord=qm_region, mm_coord=[], mm_charge=[], \
+                    qm_element=qm_region_ele, template=self.vars.qm_nac_template, vars=self.vars, \
+                    inp=self.inp, nac=nac)
+                nac = False
+
+            self.qm_qmmm = molpro.molpro(qm_coord=qm_region, mm_coord=mm_region, mm_charge=mm_charge, \
+                qm_element=qm_region_ele, template=self.vars.qm_template, vars=self.vars, \
+                inp=self.inp, nac=nac)
+
+        # gaussian 
+        elif self.inp.qm_method == 3:
+            # assert 1 == 2
+            if self.inp.qmmm_nac == 2:
+                print('nonadabatic coupling will be generated in only QM region!')
+                assert path.exists(self.vars.qm_nac_template)
+                self.qm_qm = gaussian.gaussian(qm_coord=qm_region, qm_element=qm_region_ele, mm_coord=[], \
+                    mm_charge=[], template=self.vars.qm_nac_template, vars=self.vars, nac=nac, \
+                    inp=self.inp)
+                nac = False 
+
+            self.qm_qmmm = gaussian.gaussian(qm_coord=qm_region, qm_element=qm_region_ele, mm_coord=mm_region, \
+                mm_charge=mm_charge, template=self.vars.qm_template, vars=self.vars, nac=nac, \
+                inp=self.inp)
+
+        # elif self.inp.qm_method == 5:
+        #     if self.inp.qmmm_nac == 2 and self.inp.label_qmmm_bomd != 1:
+        #         print('nonadabatic coupling will be generated in only QM region!')
+        #         assert path.exists(self.vars.qm_nac_template)
+        #         self.qm_qm = bagel.bagel(qm_coord=qm_region, mm_coord=[], mm_charge=[], \
+        #             qm_element=qm_region_ele, template=self.vars.qm_nac_template, vars=self.vars, \
+        #             bomd=self.inp.label_qmmm_bomd, nac=nac)
+        #         nac = False
+
+        #     self.qm_qmmm = bagel.bagel(qm_coord=qm_region, mm_coord=mm_region, mm_charge=mm_charge, \
+        #         qm_element=qm_region_ele, template=self.vars.qm_template, vars=self.vars, \
+        #         bomd=self.inp.label_qmmm_bomd, nac=nac)
+
+        else:
+            assert IndexError, '%d is an invalid qm method!'%self.inp.qm_method
+
+        # amber
+        if self.inp.mm_method == 1 and self.atom_num_mm > 0:
+            self.mm_qm_mm = amber.amber(self.qm_mm_region, self.vars.QM_MM_top_file, self.vars.mm_inp)
+            self.mm_mm = amber.amber(self.mm_region, self.vars.MM_top_file, self.vars.mm_inp)
+            self.mm_qm = amber.amber(self.qm_region, self.vars.QM_top_file, self.vars.mm_inp)
+            
+            if self.inp.label_LA == 1:
+                qm_region_ele, qm_region = self.LA.add_LA(LA=True, qm_region=self.qm_region, qm_element=self.qm_region_element)
+                self.mm_qm_la = amber.amber(qm_region, self.vars.QM_LA_top_file, self.vars.mm_inp)
+
+        else:
+            assert IndexError, '%d is not as valid mm method!'%self.inp.mm_method
+
+        return 
+
+
+    def write_inp(self):
+        if self.inp.qmmm_nac == 2:
+            os.chdir(self.vars.QM_QMdir)
+            self.qm_qm.make_input()
+
+        os.chdir(self.vars.QM_QMMMdir)
+        self.qm_qmmm.make_input()
+
+        if self.atom_num_mm == 0:
+            return 
+
+        os.chdir(self.vars.MM_QMMMdir)
+        self.mm_qm_mm.make_input()
+
+        os.chdir(self.vars.MM_MMdir)
+        self.mm_mm.make_input()
+
+        os.chdir(self.vars.MM_QMdir)
+        self.mm_qm.make_input()
+            
+        if self.inp.label_LA == 1:
+            os.chdir(self.vars.MM_QMLAdir)
+            self.mm_qm_la.make_input()
+
+        return 
+
+
+    @timer.timer
+    def run_works(self):
+        if self.inp.qmmm_nac == 2:
+            os.chdir(self.vars.QM_QMdir)
+            print('Now work dir of QM calculation for only QM region:', end='')
+            print(os.getcwd())
+            print('Time interval of QM calculation for only QM region: %.2f seconds'% \
+            self.qm_qm.run())
+
+        os.chdir(self.vars.QM_QMMMdir)
+        print('Now work dir of QM calculation for QM region around point charge:', end='')
+        print(os.getcwd())
+        print('Time interval of QM calculation for QM region: %.2f seconds'% \
+        self.qm_qmmm.run())
+
+        if self.atom_num_mm == 0:
+            return 
+
+        os.chdir(self.vars.MM_QMMMdir)
+        print('Now work dir of MM calculation for QM+MM region:', end='')
+        print(os.getcwd())
+        print('Time interval of MM calculation for QM+MM region: %.2f seconds'% \
+        self.mm_qm_mm.run())
+
+        os.chdir(self.vars.MM_MMdir)
+        print('Now work dir of MM calculation for MM region:', end='')
+        print(os.getcwd())
+        print('Time interval of MM calculation for MM region: %.2f seconds'% \
+        self.mm_mm.run())
+
+        os.chdir(self.vars.MM_QMdir)
+        print('Now work dir of MM calculation for QM region:', end='')
+        print(os.getcwd())
+        print('Time interval of MM calculation for QM region: %.2f seconds'% \
+        self.mm_qm.run())
+
+        
+        if self.inp.label_LA == 1:
+            os.chdir(self.vars.MM_QMLAdir)
+            print('Now work dir of MM calculation for QM+LA region:', end='')
+            print(os.getcwd())
+            print('Time interval of MM calculation for QM+LA region: %.2f seconds'% \
+            self.mm_qm_la.run())
+    
+
+        return 
+
+
+    def get_terms(self):
+        # in atomic unit
+        # qm_term = [[qm_energy, qm_grad, qm_nac], [mm_energy, mm_grad, mm_nac]]
+        # type(energy) = dict
+        #     type(energy[i_state]) = float
+        # type(grad) = dict
+        #     type(grad(i_state)) = list
+        # type(nac) = dict
+        #     type(nac[i_state] = dict
+        #         type(nac[i_state][i_state]) = list
+
+        # mm_*_term = [energy, grad]
+        # type(energy) = dict
+        #     type(energy[E_type]) = float
+        # type(grad) = dict
+        #     type(grad[E_type]) = list
+
+
+        if self.inp.qmmm_nac == 2:
+            os.chdir(self.vars.QM_QMdir)
+            self.qm_qm_term = self.qm_qm.parser()
+
+        os.chdir(self.vars.QM_QMMMdir)
+        self.qm_qmmm_term = self.qm_qmmm.parser()
+
+        if self.atom_num_mm == 0:
+            return 
+
+        os.chdir(self.vars.MM_QMMMdir)
+        self.mm_qm_mm_term = self.mm_qm_mm.parser()
+
+        os.chdir(self.vars.MM_MMdir)
+        self.mm_mm_term = self.mm_mm.parser()
+        os.chdir(self.vars.MM_QMdir)
+        self.mm_qm_term = self.mm_qm.parser()
+
+        if self.inp.label_LA == 1:
+            os.chdir(self.vars.MM_QMLAdir)
+            self.mm_qm_la_term = self.mm_qm_la.parser()
+            
+        os.chdir(self.vars.root)
+
+        return 
+
+
+    def prepare_terms(self):
+        self.qm_term_tmp = copy.deepcopy(self.qm_qmmm_term)
+        self.qm_term = [{}, {}, {}]
+        if self.inp.qmmm_nac == 2:
+            self.qm_term_tmp[0][2] = copy.deepcopy(self.qm_qm_term[0][2])
+    
+
+        # merge qm terms with addition by loading group index, 
+        # whether positive or negative value is converted in the corresponding parser.
+        # convert type to [energy, grad, nac]
+        # energy 
+        qm, mm = self.qm_term_tmp[0][0], self.qm_term_tmp[1][0]
+        for i_state in range(self.n_state):
+            qm_e, mm_e = qm[i_state+1], mm[i_state+1]
+            
+            if self.inp.label_LA == 1:
+                if self.inp.qmmm_scheme == 1:
+                    qm_e = self.LA.remove_LA(0, qm_e)
+                    
+            self.qm_term[0][i_state+1] = qm_e + mm_e
+            
+         
+        # gradient 
+        qm, mm = self.qm_term_tmp[0][1], self.qm_term_tmp[1][1]
+        for i_state in range(self.n_state):
+            qm_grad, mm_grad = qm[i_state+1], mm[i_state+1]
+            assert type(qm_grad) == list and type(mm_grad) == list
+            if self.inp.label_LA == 1:
+                qm_grad, mm_grad, la_grad = self.LA.remove_LA(1, qm_grad, mm_grad)
+                assert type(qm_grad) == list and type(mm_grad) == list
+                
+            grad = [x[0] for x in sorted(zip(qm_grad + mm_grad, \
+                self.group.QM + self.group.MM), key = lambda y:y[1])]
+
+            self.qm_term[1][i_state+1] = grad
+
+            
+        # nac
+        qm, mm = self.qm_term_tmp[0][2], self.qm_term_tmp[1][2]
+        for i_state in range(self.n_state):
+            self.qm_term[2][i_state+1] = {}
+            for j_state in range(self.n_state):
+                if self.inp.label_qmmm_bomd == 1:
+                    nac = np.zeros(np.shape(self.qm_mm_region)).tolist()
+                    self.qm_term[2][i_state+1][j_state+1] = nac
+                    continue 
+                
+                qm_nac, mm_nac = qm[i_state+1][j_state+1], mm[i_state+1][j_state+1]
+                self.qm_term[2][i_state+1][j_state+1] = qm_nac 
+                # assert type(qm_nac) == list and type(mm_nac) == list
+                # if self.inp.label_LA == 1:
+                #     qm_nac, mm_nac, la_nac = self.LA.remove_LA(2, qm_nac, mm_nac)
+                #     assert type(qm_nac) == list and type(mm_nac) == list
+                    
+                # nac = [x[0] for x in sorted(zip(qm_nac + mm_nac, \
+                # self.group.QM + self.group.MM), key = lambda y:y[1])]
+                # if self.inp.LA == 1:
+                #     nac.extend(la_nac)
+                    
+                # self.qm_term[2][i_state+1][j_state+1] = nac
+                
+
+        if self.atom_num_mm == 0:
+            return 
+
+        # zeros for mm gradient, and sorted by group index
+        qm_zero = np.zeros([len(self.group.QM),3]).tolist()
+        mm_zero = np.zeros([len(self.group.MM),3]).tolist()
+        sort_key = self.group.QM + self.group.MM
+
+        for key in self.mm_mm_term[1].keys():
+            assert type(self.mm_mm_term[1][key]) is list 
+            pre_sort = qm_zero + self.mm_mm_term[1][key]
+            self.mm_mm_term[1][key] = np.array([x[1] for x in sorted(zip(sort_key, pre_sort), \
+                key=lambda y:y[0])]).tolist()
+
+        for key in self.mm_qm_term[1].keys():
+            assert type(self.mm_qm_term[1][key]) is list 
+            pre_sort = self.mm_qm_term[1][key] + mm_zero
+            self.mm_qm_term[1][key] = np.array([x[1] for x in sorted(zip(sort_key, pre_sort), \
+                key=lambda y:y[0])]).tolist()
+     
+        if self.inp.label_LA == 1:
+            for key in self.mm_qm_la_term[1].keys():
+                grad = self.mm_qm_la_term[1][key]
+                grad, new_mm_zero = self.LA.remove_LA(3, grad, mm_zero)
+                assert type(grad) is list and type(new_mm_zero) is list 
+                pre_sort = grad + new_mm_zero
+                self.mm_qm_la_term[1][key] = np.array([x[1] for x in sorted(zip(sort_key, pre_sort), \
+                    key=lambda y:y[0])]).tolist()
+                
+        return 
+
+
+    def parser(self):
+        # addition of terms between qm and mm, only involve the ground state (the first)
+        self.energy = copy.deepcopy(self.qm_term[0])
+        self.gradient = copy.deepcopy(self.qm_term[1])
+        self.nac = copy.deepcopy(self.qm_term[2])
+        if self.atom_num_mm == 0:
+            return 
+
+        self.mm_mm_term[1] = {x:np.array(self.mm_mm_term[1][x]) for x in self.mm_mm_term[1]}
+        self.mm_qm_term[1] = {x:np.array(self.mm_qm_term[1][x]) for x in self.mm_qm_term[1]}
+        self.mm_qm_mm_term[1] = {x:np.array(self.mm_qm_mm_term[1][x]) for x in self.mm_qm_mm_term[1]}
+        
+        
+        if self.inp.label_LA == 1:
+            self.mm_qm_la_term[1] = {x:np.array(self.mm_qm_la_term[1][x]) for x in self.mm_qm_la_term[1]}
+
+        for i_state in range(self.n_state):
+            if self.inp.label_qmmm_bomd == 1 and i_state + 1 != self.current_state:
+                continue 
+            
+            e_mm_mm = self.mm_mm_term[0][self.vars.mm_tot]
+            e_int = self.mm_qm_mm_term[0][self.vars.mm_bonded] + self.mm_qm_mm_term[0][self.vars.mm_vdw] - \
+                (self.mm_qm_term[0][self.vars.mm_bonded] + self.mm_qm_term[0][self.vars.mm_vdw] + \
+                    self.mm_mm_term[0][self.vars.mm_bonded] + self.mm_mm_term[0][self.vars.mm_vdw]) 
+            self.energy[i_state+1] += e_mm_mm + e_int
+            
+            g_mm_mm = self.mm_mm_term[1][self.vars.mm_tot]
+            g_int = self.mm_qm_mm_term[1][self.vars.mm_bonded] + self.mm_qm_mm_term[1][self.vars.mm_vdw] - \
+                (self.mm_qm_term[1][self.vars.mm_bonded] + self.mm_qm_term[1][self.vars.mm_vdw] + \
+                    self.mm_mm_term[1][self.vars.mm_bonded] + self.mm_mm_term[1][self.vars.mm_vdw]) 
+            self.gradient[i_state+1] = np.array(self.gradient[i_state+1])
+            self.gradient[i_state+1] += g_mm_mm + g_int
+                
+ 
+            # if self.inp.label_LA == 1:
+            #     self.energy[i_state+1] -= self.mm_qm_la_term[0][self.vars.mm_bonded] - self.mm_qm_term[0][self.vars.mm_bonded]
+            #     self.gradient[i_state+1] -= self.mm_qm_la_term[1][self.vars.mm_bonded] - self.mm_qm_term[1][self.vars.mm_bonded]
+        
+        return 
+
+
+    def write_interface(self):
+        with open(self.vars.result, 'w') as result:
+            # write coordinate in atomic unit
+            result.write('{:>7d}'.format(self.atom_num) + '\n')
+            result.write(' The coordinates\n')
+            for i_atom in range(self.atom_num):
+                line = '{:<6s}'.format(self.qm_mm_region_element[i_atom].lower())
+                for coord in self.qm_mm_region[i_atom]:
+                    line += '{:>30.14f}'.format(coord)
+                result.write(line + '\n')
+
+            # write energy of states
+            result.write(' Energy of electronic states\n')
+            for i_state in range(self.n_state):
+                result.write('{:>30.12f}'.format(self.energy[i_state+1]) + '\n')
+
+            # write gradient of states 
+            result.write(' Gradient of electronic states\n')
+            for i_state in range(self.n_state):
+                result.write(' State:' + '{:>20d}'.format(i_state+1) + '\n')
+                for i_atom in range(self.atom_num):
+                    line = ''
+                    for grad in self.gradient[i_state+1][i_atom]:
+                        line += '{:>30.14f}'.format(grad)
+                    result.write(line + '\n')
+
+            # write coupling between states
+            result.write('Nonadiabatic couplings\n')
+            
+            for i_state in range(self.n_state):
+                for j_state in range(self.n_state):
+                    result.write(' State:' + \
+                        '{:>20d}'.format(i_state+1) + '{:>20d}'.format(j_state+1) + '\n')
+                    for nac_list in self.nac[i_state+1][j_state+1]:
+                        line = ''
+                        for nac in nac_list:
+                            line += '{:>30.14f}'.format(nac)
+                        result.write(line + '\n')
+
+        return 
+
+    
+    def write_other(self):
+        # create qm energy file
+        if not path.exists(self.vars.qm_energy_file):
+            qef = open(self.vars.qm_energy_file, 'w')
+            qef.write('#')
+            for i_state in range(self.n_state):
+                qef.write('{:>20d}'.format(i_state))
+            qef.write('\n')
+        else:
+            qef = open(self.vars.qm_energy_file, 'a')
+            
+        # write qm energy 
+        for i_state in range(self.n_state):
+            qef.write('{:>20.12f}'.format(self.qm_term[0][i_state+1]))
+            
+        # close the qm energy file 
+        qef.write('\n')
+        qef.close()
+ 
+        return 
+    
+    
+    
+    def dump_param(self):
+        # dump parameters for calculation
+        self.param = {self.vars.natom_key:self.atom_num, \
+            self.vars.nstate_key:self.n_state, \
+            self.vars.currentstate_key:self.current_state, \
+            self.vars.natommm_key:self.atom_num_mm, \
+            self.vars.natomqm_key:self.atom_num_qm}
+
+        jsontool.dump_json(self.vars.param_file, self.param)
+
+        # copy the json file to every calculation workspaces
+        for dir in self.vars.workdirs:
+            shutil.copy(self.vars.param_file, dir)
+
+        return 
+
+
+
+if __name__ == '__main__':
+    test = additive()
+    

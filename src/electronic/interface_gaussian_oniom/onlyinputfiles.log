@@ -1,0 +1,304 @@
+ Entering Gaussian System, Link 0=g09
+ Input=onlyinputfiles.gjf
+ Output=onlyinputfiles.log
+ Initial command:
+ /opt/g09_D01_em64t/g09/l1.exe "/tmp/Gau-30522.inp" -scrdir="/tmp/"
+ Entering Link 1 = /opt/g09_D01_em64t/g09/l1.exe PID=     30523.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
+                23-Mar-2015 
+ ******************************************
+ %chk=onlyinputfiles.chk
+ %nproc=2
+ Will use up to    2 processors via shared memory.
+ %mem=1GB
+ ----------------------------------------------------------------------
+ #p ONIOM(b3lyp/6-31g(d,p) td(singlet,nstates=3,root=1):uff)=(EmbedChar
+ ge,onlyinputfiles) iop(9/40=20) nosymm iop(9/40=20) pop=full
+ ----------------------------------------------------------------------
+ 1/38=1,52=12,56=1,61=3,64=2,74=500/1;
+ 2/12=2,15=1,17=6,18=5,40=1/2;
+ 1/38=1,52=12,53=3172,61=3,64=2,74=500,118=2/20;
+ 1/52=12,53=2032,61=3,74=500,118=2/20;
+ 1/52=12,53=1022,61=3,64=2,74=500,118=2/20;
+ 99/5=1,9=1/99;
+ Leave Link    1 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.1
+ (Enter /opt/g09_D01_em64t/g09/l101.exe)
+ ONIOM: restoring gridpoint  3 on chk file.
+ ------
+ ch2nh2
+ ------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1 for low   level calculation on real  system.
+ Charge =  0 Multiplicity = 1 for high  level calculation on model system.
+ Charge =  0 Multiplicity = 1 for low   level calculation on model system.
+ O-O_3--0.834000      0    -0.36871  -2.19424   0.       H 
+ H-H_-0.417000        0     0.59129  -2.19424   0.       H 
+ H-H_-0.417000        0    -0.68916  -1.28931   0.       H 
+ O-O_3--0.834000      0    -2.34712   0.34173   0.       M 
+ H-H_-0.417000        0    -1.38712   0.34173   0.       M 
+ H-H_-0.417000        0    -2.66758   1.24666   0.       M 
+ 
+ NAtoms=      6 NQM=        3 NQMF=       0 NMMI=      3 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2           3           4           5           6
+ IAtWgt=          16           1           1          16           1           1
+ AtmWgt=  15.9949146   1.0078250   1.0078250  15.9949146   1.0078250   1.0078250
+ NucSpn=           0           1           1           0           1           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   2.7928460   2.7928460   0.0000000   2.7928460   2.7928460
+ AtZNuc=   8.0000000   1.0000000   1.0000000   8.0000000   1.0000000   1.0000000
+ Generating MM parameters.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+ Layer 1 (S) has      3 atoms and charge   0.00000000 sum=   0.00000000
+ Layer 2 (R) adds     3 atoms and charge   0.00000000 sum=   0.00000000
+ MMInit generated parameter data with length LenPar=         649.
+ MM Charge=              0.0000 electrons
+ MM Dipole moment (Debye):
+    X=              2.5619    Y=              3.6251    Z=              0.0000  Tot=              4.4390
+ MM Quadrupole moment (Debye-Ang):
+   XX=             -2.8546   YY=             -3.4350   ZZ=              0.0000
+   XY=             -8.4572   XZ=              0.0000   YZ=              0.0000
+ MM Traceless Quadrupole moment (Debye-Ang):
+   XX=             -0.7581   YY=             -1.3385   ZZ=              2.0965
+   XY=             -8.4572   XZ=              0.0000   YZ=              0.0000
+ MM Octapole moment (Debye-Ang**2):
+  XXX=              8.3899  YYY=             20.6684  ZZZ=              0.0000  XYY=              2.9885
+  XXY=              9.9759  XXZ=              0.0000  XZZ=              0.0000  YZZ=              0.0000
+  YYZ=              0.0000  XYZ=              0.0000
+ MM Hexadecapole moment (Debye-Ang**3):
+ XXXX=            -12.1133 YYYY=            -36.0856 ZZZZ=              0.0000 XXXY=            -32.0291
+ XXXZ=              0.0000 YYYX=            -35.2452 YYYZ=              0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=             22.3553 XXZZ=              0.0000 YYZZ=              0.0000
+ XXYZ=              0.0000 YYXZ=              0.0000 ZZXY=              0.0000
+ Leave Link  101 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.1
+ (Enter /opt/g09_D01_em64t/g09/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8    10081003       -0.368705   -2.194245    0.000000
+      2          1    10011000        0.591295   -2.194245    0.000000
+      3          1    10011000       -0.689160   -1.289309    0.000000
+      4          8    10081003       -2.347122    0.341727    0.000000
+      5          1    10011000       -1.387122    0.341727    0.000000
+      6          1    10011000       -2.667577    1.246662    0.000000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  O    0.000000
+     2  H    0.960000   0.000000
+     3  H    0.960000   1.567952   0.000000
+     4  O    3.216409   3.881423   2.325751   0.000000
+     5  H    2.732823   3.216409   1.774099   0.960000   0.000000
+     6  H    4.138194   4.739207   3.216409   0.960000   1.567952
+                    6
+     6  H    0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    H4O2
+ Framework group  CS[SG(H4O2)]
+ Deg. of freedom     9
+ Full point group                 CS      NOp   2
+ Rotational constants (GHZ):    416.7917648      5.2904637      5.2241519
+ Leave Link  202 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l120.exe)
+ ONIOM: saving gridpoint 17
+ ONIOM: restoring gridpoint  3 on chk file.
+ ONIOM: generating point  3 -- low level on real system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ ch2nh2
+ Point  3 -- low level on real system.
+
+ 0,1
+  O-O_3--0.834000                                  -0.368705030000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                     0.591294970000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                    -0.689159620000     -1.289308740000      0.000000000000
+  O-O_3--0.834000                                  -2.347122270000      0.341726610000      0.000000000000
+  H-H_-0.417000                                    -1.387122270000      0.341726610000      0.000000000000
+  H-H_-0.417000                                    -2.667576860000      1.246662440000      0.000000000000
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ Leave Link  120 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l120.exe)
+ ONIOM: saving gridpoint  3
+ ONIOM: restoring gridpoint 17
+ ONIOM: restoring gridpoint  2 on chk file.
+ ONIOM: generating point  2 -- high level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) B3LYP/6-31G(D,P) TD(SINGLET,NSTATES=3,ROOT=1)
+
+ ch2nh2
+ Point  2 -- high level on model system.
+
+ 0,1
+  O-O_3--0.834000                                  -0.368705030000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                     0.591294970000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                    -0.689159620000     -1.289308740000      0.000000000000
+  O-#6--0.834000                                   -2.347122270000      0.341726610000      0.000000000000
+  H-#6-0.417000                                    -1.387122270000      0.341726610000      0.000000000000
+  H-#6-0.417000                                    -2.667576860000      1.246662440000      0.000000000000
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ Leave Link  120 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l120.exe)
+ ONIOM: saving gridpoint  2
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  1 -- low level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+ Generating MM parameters for model system.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+       3 point charges sum to:      0.00000000
+ MMInit generated parameter data with length LenPar=         553.
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ ch2nh2
+ Point  1 -- low level on model system.
+
+ 0,1
+  O-O_3--0.834000                                  -0.368705030000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                     0.591294970000     -2.194244570000      0.000000000000
+  H-H_-0.417000                                    -0.689159620000     -1.289308740000      0.000000000000
+  O-#6--0.834000                                   -2.347122270000      0.341726610000      0.000000000000
+  H-#6-0.417000                                    -1.387122270000      0.341726610000      0.000000000000
+  H-#6-0.417000                                    -2.667576860000      1.246662440000      0.000000000000
+
+ 1 2 1.000 3 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 5 1.000 6 1.000
+ 5 4 1.000
+ 6 4 1.000
+ 
+ --------------------------------------------------------------------------------
+
+ Leave Link  120 at Mon Mar 23 15:59:11 2015, MaxMem=   134217728 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l9999.exe)
+
+ Test job not archived.
+ 1\1\GINC-EAM\SP\ONIOM(B3LYP TD-FC/6-31G(d,p):UFF)\Mixed\H4O2\DULIKAI\2
+ 3-Mar-2015\0\\#p ONIOM(b3lyp/6-31g(d,p) td(singlet,nstates=3,root=1):u
+ ff)=(EmbedCharge,onlyinputfiles) iop(9/40=20) nosymm iop(9/40=20) pop=
+ full\\ch2nh2\\0,1\O,0,-0.36870503,-2.19424457,0.\H,0,0.59129497,-2.194
+ 24457,0.\H,0,-0.68915962,-1.28930874,0.\O,0,-2.34712227,0.34172661,0.\
+ H,0,-1.38712227,0.34172661,0.\H,0,-2.66757686,1.24666244,0.\\Version=E
+ M64L-G09RevD.01\HF=0.\RMSD=0.000e+00\PG=CS [SG(H4O2)]\\@
+
+
+ IF IT HAPPENS, IT MUST BE POSSIBLE.
+
+ -- THE UNNAMED LAW FROM PAUL DICKSON'S 
+    "THE OFFICIAL RULES"
+ Job cpu time:       0 days  0 hours  0 minutes  0.3 seconds.
+ File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      3 Scr=      1
+ Normal termination of Gaussian 09 at Mon Mar 23 15:59:11 2015.

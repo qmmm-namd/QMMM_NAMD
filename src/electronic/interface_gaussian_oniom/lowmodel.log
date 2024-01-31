@@ -1,0 +1,221 @@
+ Entering Gaussian System, Link 0=g09
+ Input=lowmodel.gjf
+ Output=lowmodel.log
+ Initial command:
+ /opt/g09_D01_em64t/g09/l1.exe "/tmp/Gau-28018.inp" -scrdir="/tmp/"
+ Entering Link 1 = /opt/g09_D01_em64t/g09/l1.exe PID=     28019.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
+                23-Mar-2015 
+ ******************************************
+ -------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+ -------------------------------------
+ 1/38=1,56=1,64=2/1;
+ 2/12=2,15=1,17=6,18=5,40=1/2;
+ 3/5=30,11=9,16=1,25=1,30=1,41=10200000,43=2/1;
+ 4/20=10,24=3/2;
+ 99/5=1,9=1/99;
+ Leave Link    1 at Mon Mar 23 14:14:01 2015, MaxMem=           0 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l101.exe)
+ -------------------------------------------
+ ch2nh2 Point 3 -- low level on real system.
+ -------------------------------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 1
+ O-O_3--0.834000      -0.36871  -2.19424   0. 
+ H-H_-0.417000         0.59129  -2.19424   0. 
+ H-H_-0.417000        -0.68916  -1.28931   0. 
+ O-O_3--0.834000      -2.34712   0.34173   0. 
+ H-H_-0.417000        -1.38712   0.34173   0. 
+ H-H_-0.417000        -2.66758   1.24666   0. 
+ 
+ NAtoms=      6 NQM=        6 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2           3           4           5           6
+ IAtWgt=          16           1           1          16           1           1
+ AtmWgt=  15.9949146   1.0078250   1.0078250  15.9949146   1.0078250   1.0078250
+ NucSpn=           0           1           1           0           1           1
+ AtZEff=   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   2.7928460   2.7928460   0.0000000   2.7928460   2.7928460
+ AtZNuc=   8.0000000   1.0000000   1.0000000   8.0000000   1.0000000   1.0000000
+ Generating MM parameters.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+ MMInit generated parameter data with length LenPar=         649.
+ MM Charge=              0.0000 electrons
+ MM Dipole moment (Debye):
+    X=              2.5619    Y=              3.6251    Z=              0.0000  Tot=              4.4390
+ MM Quadrupole moment (Debye-Ang):
+   XX=             -2.8546   YY=             -3.4350   ZZ=              0.0000
+   XY=             -8.4572   XZ=              0.0000   YZ=              0.0000
+ MM Traceless Quadrupole moment (Debye-Ang):
+   XX=             -0.7581   YY=             -1.3385   ZZ=              2.0965
+   XY=             -8.4572   XZ=              0.0000   YZ=              0.0000
+ MM Octapole moment (Debye-Ang**2):
+  XXX=              8.3899  YYY=             20.6684  ZZZ=              0.0000  XYY=              2.9885
+  XXY=              9.9759  XXZ=              0.0000  XZZ=              0.0000  YZZ=              0.0000
+  YYZ=              0.0000  XYZ=              0.0000
+ MM Hexadecapole moment (Debye-Ang**3):
+ XXXX=            -12.1133 YYYY=            -36.0856 ZZZZ=              0.0000 XXXY=            -32.0291
+ XXXZ=              0.0000 YYYX=            -35.2452 YYYZ=              0.0000 ZZZX=              0.0000
+ ZZZY=              0.0000 XXYY=             22.3553 XXZZ=              0.0000 YYZZ=              0.0000
+ XXYZ=              0.0000 YYXZ=              0.0000 ZZXY=              0.0000
+ Leave Link  101 at Mon Mar 23 14:14:01 2015, MaxMem=    33554432 cpu:         0.1
+ (Enter /opt/g09_D01_em64t/g09/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          8    10081003       -0.368705   -2.194245    0.000000
+      2          1    10011000        0.591295   -2.194245    0.000000
+      3          1    10011000       -0.689160   -1.289309    0.000000
+      4          8    10081003       -2.347122    0.341727    0.000000
+      5          1    10011000       -1.387122    0.341727    0.000000
+      6          1    10011000       -2.667577    1.246662    0.000000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  O    0.000000
+     2  H    0.960000   0.000000
+     3  H    0.960000   1.567952   0.000000
+     4  O    3.216409   3.881423   2.325751   0.000000
+     5  H    2.732823   3.216409   1.774099   0.960000   0.000000
+     6  H    4.138194   4.739207   3.216409   0.960000   1.567952
+                    6
+     6  H    0.000000
+ Symmetry turned off by external request.
+ Stoichiometry    H4O2
+ Framework group  CS[SG(H4O2)]
+ Deg. of freedom     9
+ Full point group                 CS      NOp   2
+ Rotational constants (GHZ):    416.7917648      5.2904637      5.2241519
+ Leave Link  202 at Mon Mar 23 14:14:01 2015, MaxMem=    33554432 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l301.exe)
+ Standard basis: Dummy (5D, 7F)
+     6 basis functions,     6 primitive gaussians,     6 cartesian basis functions
+     4 alpha electrons        4 beta electrons
+       nuclear repulsion energy         7.8526448410 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      0 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    6 NActive=    6 NUniq=    6 SFac= 1.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned off.
+ Leave Link  301 at Mon Mar 23 14:14:01 2015, MaxMem=    33554432 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l402.exe)
+ UFF calculation of energy.
+ Energy per function type:
+ Direct Coulomb + vdW (small)                           0.002260726
+ Direct Coulomb (large)                                -0.644866124
+ Direct vdW (large)                                   567.131023526
+ Non-direct Coulomb + vdW (small)                       0.000000000
+ Non-direct Coulomb (large)                             0.649443835
+ Non-direct vdW (large)                              -567.109542500
+ Harmonic stretch III                                   0.003267385
+ UFF 3-term bend                                        0.001420293
+ Energy per function class:
+        Coulomb               0.004577710
+    Vanderwaals               0.023741752
+     Stretching               0.003267385
+        Bending               0.001420293
+ Energy=    3.300713945E-02 NIter=   0.
+ Dipole moment=       1.007944       1.426207       0.000000
+ Leave Link  402 at Mon Mar 23 14:14:01 2015, MaxMem=    33554432 cpu:         0.0
+ (Enter /opt/g09_D01_em64t/g09/l9999.exe)
+
+ Test job not archived.
+ 1\1\GINC-EAM\SP\RUFF\ZDO\H4O2\DULIKAI\23-Mar-2015\0\\#P Test IOp(2/15=
+ 1,5/32=2,5/38=1) UFF\\ch2nh2 Point 3 -- low level on real system.\\0,1
+ \O,0,-0.36870503,-2.19424457,0.\H,0,0.59129497,-2.19424457,0.\H,0,-0.6
+ 8915962,-1.28930874,0.\O,0,-2.34712227,0.34172661,0.\H,0,-1.38712227,0
+ .34172661,0.\H,0,-2.66757686,1.24666244,0.\\Version=EM64L-G09RevD.01\H
+ F=0.0330071\RMSD=0.000e+00\Dipole=1.0079438,1.4262075,0.\PG=CS [SG(H4O
+ 2)]\\@
+
+
+ MOM AND DAD WENT TO ALPHA CENTAURI AND ALL
+ I GOT WAS THIS DUMB T-SHIRT.
+ Job cpu time:       0 days  0 hours  0 minutes  0.2 seconds.
+ File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 09 at Mon Mar 23 14:14:01 2015.

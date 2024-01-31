@@ -1,0 +1,5 @@
+qm_mm_top = qm_mm.top 
+qm_mm_crd = qm_mm.rst7 
+
+shake_atom_mask = @1<:15.0&@H=&!:1
+

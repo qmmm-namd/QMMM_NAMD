@@ -1,0 +1,22 @@
+# topology
+qm_mask           = :LBV
+mm_mask           = !:LBV
+reshape_mask      = @1>:20.0 
+label_reshape     = 1
+
+in_top            = prmtop
+in_crd            = inpcrd
+
+label_auto_image  = 1
+
+# frozen 
+fro_mask          = :LBV>:15.0
+
+
+# files
+qm_top     = qm.top
+mm_top     = mm.top 
+qm_mm_top  = qm_mm.top
+qm_crd     = qm.rst7
+mm_crd     = mm.rst7 
+qm_mm_crd  = qm_mm.rst7

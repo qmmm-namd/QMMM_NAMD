@@ -1,0 +1,31 @@
+{
+    "files" : {
+        "param" : "param.json",
+        "config" : "mndo.json",
+        "inp" : "mndo.inp",
+        "out" : "mndo.out",
+        "fort15" : "fort.15",
+        "fort11" : "fort.11",
+        "qmfort11" : "qm.fort11",
+        "qmmmfort11" : "qm_mm.fort11",
+        "map" : "imomap.dat",
+        "qmmap" : "qm.imomap.dat",
+        "qmmmmap" : "qmmm.imomap.dat",
+        "other" : "qm_other.dat",
+        "opt_inp" : "qm_opt_template.in",
+        "opt"  : "qm_opt.xyz"
+    },
+    
+    "dirs" : {
+        "fort11" : "old_fort11",
+        "opt"    : "opt",
+        "opt_inp" : "opt_inp"
+    },
+
+    "param" : {
+        "tail" : "",
+        "head" : ""
+    },
+
+    "command" : "mndo99"
+}

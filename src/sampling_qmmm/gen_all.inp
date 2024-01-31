@@ -1,0 +1,15 @@
+shake_atom_mask = @247<:15.0&@H=&:WAT
+
+qm_mask = @237-259
+mm_mask = @247<:20.0&!@237-259
+
+fro_mask = @247>:15.0
+
+in_top = ../prmtop
+in_crd = inpcrd
+
+reshape_mask = @247<:20.0
+
+label_auto_image = 0
+label_reshape = 1
+

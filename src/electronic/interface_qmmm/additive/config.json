@@ -1,0 +1,63 @@
+{ 
+    "root" : "./",
+    "dirs" : {
+        "home" : "QMMM_TMP",
+        "store" : "QMMM_EXAM",
+        "QM_work" : "QM_TMP",
+        "QM_works" : {
+            "QM" : "QM",
+            "QM_MM" : "QM_MM"
+        },
+
+        "MM_work" : "MM_TMP",
+        "MM_works": {
+            "QM" : "QM",
+            "MM" : "MM",
+            "QM_MM" : "QM_MM",
+            "QM_LA" : "QM_LA"
+        }
+    },
+
+    "files" : {
+        "LA_coor" : "LA_coor", 
+        "interface" : "qm_interface",
+        "result" : "qm_results.dat",
+        "qmmm" : "qmmm.json",
+        "param" : "param.json",
+        "group" : "group.json",
+        "qm_energy_file" : "qm_energy_time.out",
+        "QM" : {
+            "qm_template": "qm_template.in",
+            "qm_nac_template" : "qm_nac_template.in"
+        },
+        "MM" : {
+            "inp" : "mm.in",
+            "top" : {
+                "QM" : "qm.top",
+                "MM" : "mm.top",
+                "QM_MM" : "qm_mm.top",
+                "QM_LA" : "qm_la.top"
+            }
+        }
+    },
+
+    "groups" : {
+        "QM" : "QM",
+        "MM" : "MM"
+    },
+
+    "mm_dic_keys" : {
+        "vdw" : "VDW",
+        "ele" : "ELE",
+        "bonded" : "BONDED",
+        "tot" : "TOT"
+    },
+
+    "param_dic_keys" : {
+        "n_atom" : "n_atom",
+        "n_atom_qm" : "n_atom_qm",
+        "n_atom_mm" : "n_atom_mm",
+        "n_state" : "n_state",
+        "current_state" : "current_state"
+    }
+}

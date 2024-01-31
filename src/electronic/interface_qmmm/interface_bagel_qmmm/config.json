@@ -1,0 +1,13 @@
+{
+    "files": {
+    "config"  : "config.json",
+    "inp"    : "bagel.json",
+    "out"    : "bagel.out",
+    "other"   : "qm_other.dat",
+    "param"  : "param.json"
+    },
+
+    "param" : {},
+
+    "command": "BAGEL"
+}

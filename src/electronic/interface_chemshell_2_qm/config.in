@@ -1,0 +1,27 @@
+{
+    "root": "./",
+    "dirs": {
+        "home": "QC_TMP",
+        "work": "CHEMSHELL_TMP",
+        "template": "CHEMSHELL_EXAM"
+    },
+    "files": {
+        "dyn": "inp.json",
+        "interface": "interface.json",
+        "template": "template.json",
+        "chemshell_orca_tcl": "orca-chemsh_d3.tcl",
+        "chemshell_qchem_tcl": "qchem-chemsh.tcl",
+        "chemshell_mndo_tcl": "mndo-chemsh.tcl",
+        "chemshell_prmtop": "1.prmtop",
+        "chemshell_inpcrd": "1.inpcrd",
+        "chemshell_c": "ini.c",
+        "chemshell_template": "chemshell_template.inp",
+        "chemshell_input": "chemshell.chm",
+        "chemshell_hessian": "state_hessian.chm",
+        "chemshell_log": "result.out",
+        "chemshell_wfu": "orca.gbw"
+    },
+    "command": {
+        "chemshell": "chemsh"
+    }
+}

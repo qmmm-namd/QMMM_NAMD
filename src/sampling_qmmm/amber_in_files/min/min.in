@@ -1,0 +1,16 @@
+Minimize
+ &cntrl
+  imin=1,
+  ntx=1,
+  irest=0,
+  ntb=1,
+  maxcyc=50000,
+  ntmin=2,
+  drms=1E-9,
+  ntpr=100,
+  ntwx=0,
+  cut=10.0,
+  ntr=1,
+  restraint_wt=100,
+  restraintmask=':1'
+ /

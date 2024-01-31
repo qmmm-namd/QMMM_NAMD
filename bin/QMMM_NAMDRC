@@ -1,0 +1,32 @@
+#! /usr/bin/env bash
+# suppose the QMMM_NAMD_HOME env. is exported
+#
+# i.e. 
+export QMMM_NAMD_HOME=/share/home/huanghy/bin/jade_mapping
+
+# binary
+export PATH=$QMMM_NAMD_HOME/bin:$PATH
+
+# # interface
+export QMMM_NAMD_HOME_INTERFACE=$QMMM_NAMD_HOME/src/electronic
+export PATH=$QMMM_NAMD_HOME_INTERFACE:$PATH
+## interface_qmmm
+export QMMM_NAMD_HOME_INTERFACE_QMMM=$QMMM_NAMD_HOME_INTERFACE/interface_qmmm
+export PATH=$QMMM_NAMD_HOME_INTERFACE_QMMM:$PATH
+export QMMM_NAMD_SAMPLE_QMMM=$QMMM_NAMD_HOME/src/sampling_qmmm
+export PATH=$QMMM_NAMD_SAMPLE_QMMM:$PATH
+export PATH=$QMMM_NAMD_SAMPLE_QMMM/example:$PATH
+
+## kkr
+export QMMM_NAMD_HOME_INTERFACE=$QMMM_NAMD_HOME/src/krr
+export PATH=$QMMM_NAMD_HOME_INTERFACE:$PATH
+# # sampling
+export QMMM_NAMD_HOME_SAMPLE=$QMMM_NAMD_HOME/src/sampling2
+export PATH=$QMMM_NAMD_HOME_SAMPLE:$PATH
+# # pop
+export QMMM_NAMD_POPULATION=$QMMM_NAMD_HOME/contrib/population_ana
+export PATH=$QMMM_NAMD_POPULATION:$PATH
+# # contrib : analysis tools
+export QMMM_NAMD_CONTRIB=$QMMM_NAMD_HOME/contrib
+export PATH=$QMMM_NAMD_CONTRIB:$PATH
+#

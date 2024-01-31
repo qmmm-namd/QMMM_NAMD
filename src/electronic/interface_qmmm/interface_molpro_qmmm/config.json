@@ -1,0 +1,30 @@
+{
+    "files": {
+    "param"  : "param.json",
+    "config" : "molpro.json",
+    "inp"    : "molpro.in",
+    "out"    : "molpro.out",
+    "wfu"    : "wfu",
+    "qmwfu"  : "qm.wfu",
+    "qmmmwfu" : "qmmm.wfu",
+    "lattice": "lat.in",
+    "opt"     : "qm_opt.xyz",
+    "opt_inp" : "qm_opt_template.in",
+    "other"   : "qm_other.dat"
+    },
+
+    "dir" : {
+        "tmp" : "tmp",
+        "wfu" : "wfu",
+        "old_wfu" : "old_wfu",
+        "opt"  : "opt",
+        "opt_inp" : "opt_inp"
+    },
+
+    "param" : {
+        "tail": "",
+        "head": ""
+    },
+
+    "command": "molpro"
+}

@@ -1,0 +1,10 @@
+in_top = ../prmtop 
+in_crd = inpcrd 
+
+qm_mask = :1
+mm_mask = !:1
+reshape_mask = @1>:20.0
+
+label_auto_image = 1
+label_reshape = 1
+

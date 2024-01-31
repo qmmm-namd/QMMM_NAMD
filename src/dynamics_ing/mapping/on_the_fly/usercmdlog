@@ -1,0 +1,345 @@
+************************
+gg0110 nscc540_WJ
+    1  2019-03-19 21:29:24 cd hudp/
+    2  2019-03-19 21:29:25 cd cal/
+    3  2019-03-19 21:29:26 ls
+    4  2019-03-19 21:29:33 cd jade_mapping/
+    5  2019-03-19 21:29:34 ls
+    6  2019-03-19 21:29:41 cd src
+    7  2019-03-19 21:29:50 ls
+    8  2019-03-19 21:29:55 cd dynamics/
+    9  2019-03-19 21:29:57 ls
+   10  2019-03-19 21:30:13 ls ../action/
+   11  2019-03-19 21:30:26 vi main_sh.f90 
+   12  2019-03-19 21:31:00 pwd
+   13  2019-03-19 21:32:20 vi main_sh.f90 
+   14  2019-03-19 21:36:23 vi sub_read_coor.f90
+   15  2019-03-19 21:37:26 vi main_sh.f90 
+   16  2019-03-19 21:38:28 grep 'stru_xyz.in' *
+   17  2019-03-19 21:38:37 grep 'stru_xyz.in' */*
+   18  2019-03-19 21:39:08 vi mapping/sub_read_control.f90
+   19  2019-03-19 21:40:30 grep 'stru_xyz.in' */*/*
+   20  2019-03-19 21:44:37 cd mapping/
+   21  2019-03-19 21:44:37 ls
+   22  2019-03-19 21:44:41 cd on_the_fly/
+   23  2019-03-19 21:44:43 ls
+   24  2019-03-19 21:45:15 vi sub_evolution_mapping_2_on_the_fly.f90
+   25  2019-03-19 21:45:48 vi sub_write_geom.f90 sub_write_geom_mapping.f90 -O
+   26  2019-03-19 21:47:06 vi ../../sub_write_current_geom.f90 
+   27  2019-03-19 21:47:34 vi sub_write_geom.f90 sub_write_geom_mapping.f90 -O
+   28  2019-03-19 21:48:15 cd ../..
+   29  2019-03-19 21:48:23 make install
+   30  2019-03-19 21:54:56 grep "interface file" *
+   31  2019-03-19 21:55:07 grep "interface file" */*
+   32  2019-03-19 21:55:13 grep "interface file" */*/*
+   33  2019-03-19 21:55:54 grep "qm_interface" *
+   34  2019-03-19 21:56:51 vi sub_many_ana_pes.f90 mapping/on_the_fly/sub_many_ana_pes_mapping.f90 -O
+   35  2019-03-19 21:59:42 vi mapping/on_the_fly/sub_many_ana_pes_mapping.f90 mapping/on_the_fly/sub_evolution_mapping_2_on_the_fly.f90 -O
+   36  2019-03-19 22:00:54 cd ..
+   37  2019-03-19 22:01:00 cd dynamics/
+   38  2019-03-19 22:01:10 make install
+   39  2019-03-19 22:11:07 cd mapping/on_the_fly/
+   40  2019-03-19 22:11:08 ls
+   41  2019-03-19 22:11:13 vi sub_evolution_mapping_2_on_the_fly.f90 
+   42  2019-03-19 22:11:53 vi sub_evolution_mapping_2_on_the_fly.f90 sub_read_current_geom_mapping.f90 -O
+   43  2019-03-19 22:14:19 vi sub_evolution_mapping_2_on_the_fly.f90 
+   44  2019-03-19 22:14:36 vi sub_read_parameter_on_the_fly.f90 
+   45  2019-03-19 22:15:14 vi sub_evolution_mapping_2_on_the_fly.f90 
+   46  2019-03-19 22:16:54 cd ../..
+   47  2019-03-19 22:16:59 make install
+   48  2019-03-19 22:20:21 cd mapping/on_the_fly/
+   49  2019-03-19 22:20:22 ls
+   50  2019-03-19 22:20:27 vi sub_evolution_mapping_2_on_the_fly.f90
+   51  2019-03-19 22:24:03 cd ../..
+   52  2019-03-19 22:24:09 make install
+   53  2019-03-19 22:25:41 cd mapping/on_the_fly/
+   54  2019-03-19 22:25:42 ls
+   55  2019-03-19 22:25:48 vi sub_evolution_mapping_2_on_the_fly.f90
+   56  2019-03-19 22:29:06 cd ../..
+   57  2019-03-19 22:29:11 make install
+   58  2019-03-19 22:43:49 cd mapping/on_the_fly/
+   59  2019-03-19 22:43:54 vi sub_evolution_mapping_2_on_the_fly.f90 
+   60  2019-03-19 22:45:21 cd ../..
+   61  2019-03-19 22:45:26 make install
+   62  2019-03-19 23:01:29 cd mapping/on_the_fly/
+   63  2019-03-19 23:01:30 ls
+   64  2019-03-19 23:02:26 vi sub_evolution_mapping_2_on_the_fly.f90
+   65  2019-03-19 23:03:35 cd ..
+   66  2019-03-19 23:03:45 make install
+   67  2019-03-19 23:05:35 cd mapping/on_the_fly/
+   68  2019-03-19 23:05:36 ls
+   69  2019-03-19 23:05:41 vi sub_evolution_mapping_2_on_the_fly.f90
+   70  2019-03-19 23:07:12 cd ../..
+   71  2019-03-19 23:07:18 make install
+   72  2019-03-19 23:10:20 cd mapping/on_the_fly/
+   73  2019-03-19 23:10:24 vi sub_many_ana_pes_mapping.f90 
+   74  2019-03-19 23:11:35 vi ../../include/var_n_atom.h 
+   75  2019-03-19 23:11:48 vi sub_many_ana_pes_mapping.f90 
+   76  2019-03-19 23:12:37 cd ..
+   77  2019-03-19 23:12:46 make install
+   78  2019-03-19 23:14:31 ls
+   79  2019-03-19 23:15:26 vi mapping/on_the_fly/sub_evolution_mapping_2_on_the_fly.f90
+   80  2019-03-20 00:37:34 vi sub_write_geom_mapping.f90
+   81  2019-03-20 00:37:55 cd mapping/on_the_fly/
+   82  2019-03-20 00:37:57 vi sub_write_geom_mapping.f90
+   83  2019-03-20 00:38:57 vi ../../include/param.def 
+   84  2019-03-20 00:39:30 vi sub_write_geom_mapping.f90
+   85  2019-03-20 00:40:26 vi sub_write_geom_mapping.f90 sub_evolution_mapping_2_on_the_fly.f90 -O
+   86  2019-03-20 00:45:41 cd ../..
+   87  2019-03-20 00:45:47 make install
+   88  2019-03-20 00:47:01 vi mapping/on_the_fly/sub_write_geom_mapping.f90
+   89  2019-03-20 00:47:32 make install
+   90  2019-03-20 00:51:22 cd mapping/on_the_fly/
+   91  2019-03-20 00:51:23 ls
+   92  2019-03-20 00:51:27 vi sub_evolution_mapping_2_on_the_fly.f90 
+   93  2019-03-20 01:01:22 cd ../..
+   94  2019-03-20 01:01:26 make install
+   95  2019-03-20 01:02:08 vi mapping/on_the_fly/sub_evolution_mapping_2_on_the_fly.f90
+   96  2019-03-20 01:04:08 make install
+   97  2019-03-20 01:06:24 cd mapping/on_the_fly/
+   98  2019-03-20 01:06:26 ls
+   99  2019-03-20 01:06:32 vi sub_evolution_mapping_2_on_the_fly.f90
+************************
+gg0110 nscc540_WJ
+    1  2019-03-20 09:47:22 cd hudp/cal/
+    2  2019-03-20 09:47:23 ls
+    3  2019-03-20 09:47:25 cd jade_mapping/
+    4  2019-03-20 09:47:26 ls
+    5  2019-03-20 09:47:30 cd src
+    6  2019-03-20 09:47:31 ls
+    7  2019-03-20 09:47:33 cd dynamics/
+    8  2019-03-20 09:47:34 ls
+    9  2019-03-20 09:47:38 cd mapping/
+   10  2019-03-20 09:47:40 cd on_the_fly/
+   11  2019-03-20 09:47:40 ls
+   12  2019-03-20 09:47:45 vi sub_evolution_mapping_2_on_the_fly.f90
+   13  2019-03-20 09:48:01 rm .sub_evolution_mapping_2_on_the_fly.f90.swp
+   14  2019-03-20 09:48:04 vi sub_evolution_mapping_2_on_the_fly.f90
+   15  2019-03-20 09:48:25 vi sub_read_current_geom_mapping.f90 
+   16  2019-03-20 09:48:40 vi sub_reshape_n_atom_to_n_mode.f90 
+   17  2019-03-20 09:49:07 vi sub_read_current_geom_mapping.f90 
+   18  2019-03-20 09:50:35 vi sub_evolution_mapping_2_on_the_fly.f90
+   19  2019-03-20 09:51:02 vi sub_read_current_geom_mapping.f90 
+   20  2019-03-20 09:51:36 vi sub_reshape_n_atom_to_n_mode.f90
+   21  2019-03-20 09:52:08 vi sub_reshape_n_atom_to_n_mode.f90 sub_read_current_geom_mapping.f90 -O
+   22  2019-03-20 09:55:04 cd ..
+   23  2019-03-20 09:55:10 make install
+   24  2019-03-20 10:00:27 pwd
+   25  2019-03-20 10:06:27 vi mapping/on_the_fly/sub_evolution_mapping_2_on_the_fly.f90 
+   26  2019-03-20 10:07:15 cd mapping/on_the_fly/
+   27  2019-03-20 10:07:18 vi sub_read_current_geom_mapping.f90 
+   28  2019-03-20 10:07:58 ls
+   29  2019-03-20 10:08:07 vi ../../sub_read_current_geom.f90 
+   30  2019-03-20 10:11:19 cd ../..
+   31  2019-03-20 10:11:23 vi main_sh.f90 
+   32  2019-03-20 10:12:22 ls
+   33  2019-03-20 10:15:14 cd mapping/on_the_fly/
+   34  2019-03-20 10:15:15 ls
+   35  2019-03-20 10:15:21 vi sub_evolution_mapping_2_on_the_fly.f90 
+   36  2019-03-20 10:16:48 cd ../..
+   37  2019-03-20 10:16:52 make install
+   38  2019-03-20 10:18:54 vi sub_get_mass.f90 
+   39  2019-03-20 10:22:03 cd mapping/on_the_fly/
+   40  2019-03-20 10:22:03 ls
+   41  2019-03-20 10:24:04 vi sub_write_geom_mapping.f90
+   42  2019-03-20 10:26:42 cd ..
+   43  2019-03-20 10:26:47 make install
+   44  2019-03-20 10:27:26 ls
+   45  2019-03-20 10:29:40 cd mapping/on_the_fly/
+   46  2019-03-20 10:29:41 ls
+   47  2019-03-20 10:29:49 vi sub_write_geom_mapping.f90
+   48  2019-03-20 10:30:56 cd ..
+   49  2019-03-20 10:31:01 make install
+   50  2019-03-20 10:31:57 ls
+   51  2019-03-20 10:37:54 cd mapping/
+   52  2019-03-20 10:38:07 cd on_the_fly/
+   53  2019-03-20 10:38:08 ls
+   54  2019-03-20 10:38:41 vi sub_evolution_mapping_2_on_the_fly.f90
+   55  2019-03-20 10:38:59 vi sub_write_geom_mapping.f90 sub_evolution_mapping_2_on_the_fly.f90 -O
+   56  2019-03-20 10:41:26 cd ..
+   57  2019-03-20 10:41:32 make install
+   58  2019-03-20 11:09:25 cd mapping/on_the_fly/
+   59  2019-03-20 11:09:26 ls
+   60  2019-03-20 11:09:52 vi sub_evolution_mapping_2_on_the_fly.f90 sub_write_geom_mapping.f90 -O
+   61  2019-03-20 11:11:38 vi ../../include/var_n_mode.h
+   62  2019-03-20 11:11:47 vi sub_evolution_mapping_2_on_the_fly.f90 sub_write_geom_mapping.f90 -O
+   63  2019-03-20 11:23:48 vi sub_read_parameter_on_the_fly.f90 
+   64  2019-03-20 11:24:21 vi sub_evolution_mapping_2_on_the_fly.f90 sub_write_geom_mapping.f90 -O
+************************
+gg0110 nscc540_WJ
+    1  2019-03-21 11:41:54 cd /home-gg/users/nscc540_WJ/hudp/cal/jade_mapping/src/dynamics
+    2  2019-03-21 11:41:55 ls
+    3  2019-03-21 11:42:00 make install
+    4  2019-03-21 14:27:53 cd mapping/on_the_fly/
+    5  2019-03-21 14:27:54 ls
+    6  2019-03-21 14:27:58 vi sub_test.f90 
+    7  2019-03-21 14:28:16 vi ../../include/var_n_mode.h 
+    8  2019-03-21 14:28:26 cd ../..
+    9  2019-03-21 14:28:28 make install
+   10  2019-03-21 14:32:26 cd mapping/on_the_fly/
+   11  2019-03-21 14:32:27 ls
+   12  2019-03-21 14:32:34 vi sub_evolution_mapping_2_on_the_fly.f90
+   13  2019-03-21 14:33:40 ls
+   14  2019-03-21 14:33:52 rm sub_test2.f90
+   15  2019-03-21 14:34:08 vi sub_evolution_mapping_2_on_the_fly.f90
+   16  2019-03-21 14:34:45 cd ../..
+   17  2019-03-21 14:34:49 vi Makefile 
+   18  2019-03-21 14:35:06 cd mapping/on_the_fly/
+   19  2019-03-21 14:35:06 ls
+   20  2019-03-21 14:35:14 cd ../..
+   21  2019-03-21 14:35:20 make install
+   22  2019-03-21 14:37:31 cd mapping/on_the_fly/
+   23  2019-03-21 14:37:31 ls
+   24  2019-03-21 14:37:36 vi sub_write_geom_mapping.f90
+   25  2019-03-21 14:38:07 vi sub_evolution_mapping_2_on_the_fly.f90 
+   26  2019-03-21 14:43:06 cd ../..
+   27  2019-03-21 14:43:12 make install
+   28  2019-03-21 14:47:02 cd mapping/on_the_fly/
+   29  2019-03-21 14:47:02 ls
+   30  2019-03-21 14:47:18 vi sub_write_geom_mapping.f90
+   31  2019-03-21 14:47:47 vi sub_read_current_geom_mapping.f90
+   32  2019-03-21 14:48:07 vi sub_reshape_n_atom_to_n_mode.f90
+   33  2019-03-21 14:48:17 vi sub_reshape_n_mode_to_n_atom.f90
+   34  2019-03-21 14:49:17 cd ../..
+   35  2019-03-21 14:49:17 ls
+   36  2019-03-21 14:49:22 make install
+   37  2019-03-21 14:59:55 ls
+   38  2019-03-21 15:00:12 cd mapping/on_the_fly/
+   39  2019-03-21 15:00:12 ls
+   40  2019-03-21 15:00:20 vi sub_write_geom.f90
+   41  2019-03-21 15:00:40 vi sub_write_geom_mapping.f90
+   42  2019-03-21 15:01:48 vi sub_write_geom.f90
+   43  2019-03-21 15:02:33 vi sub_write_geom_mapping.f90 sub_write_geom.f90 -O
+   44  2019-03-21 15:04:55 cd ../..
+   45  2019-03-21 15:05:14 make install
+   46  2019-03-21 15:06:12 vi mapping/on_the_fly/sub_write_geom_mapping.f90
+   47  2019-03-21 15:07:11 make install
+   48  2019-03-21 15:13:09 cd mapping/on_the_fly/
+   49  2019-03-21 15:13:10 ls
+   50  2019-03-21 15:13:17 vi sub_evolution_mapping_2_on_the_fly.f90
+   51  2019-03-21 15:13:35 vi sub_write_geom_mapping.f90
+   52  2019-03-21 15:27:26 vi sub_evolution_mapping_2_on_the_fly.f90
+   53  2019-03-21 15:28:32 cd ../..
+   54  2019-03-21 15:28:37 make install
+   55  2019-03-21 15:45:20 cd mapping/on_the_fly/
+   56  2019-03-21 15:45:25 vi sub_evolution_mapping_2_on_the_fly.f90 
+   57  2019-03-21 15:46:05 cd ../..
+   58  2019-03-21 15:46:08 make install
+   59  2019-03-21 16:22:43 cd mapping/on_the_fly/
+   60  2019-03-21 16:22:44 ls
+   61  2019-03-21 16:22:55 vi sub_evolution_mapping_2_on_the_fly.f90
+   62  2019-03-21 16:23:21 cd ../..
+   63  2019-03-21 16:23:25 make install
+   64  2019-03-21 16:46:24 cd mapping/on_the_fly/
+   65  2019-03-21 16:46:36 ls
+   66  2019-03-21 16:46:41 vi sub_write_geom_mapping.f90
+   67  2019-03-21 16:50:50 cd ../..
+   68  2019-03-21 16:50:54 make install
+   69  2019-03-21 16:52:16 cd mapping/on_the_fly/
+   70  2019-03-21 16:52:17 ls
+   71  2019-03-21 16:52:24 vi sub_write_geom_mapping.f90
+   72  2019-03-21 16:55:49 cd ../..
+   73  2019-03-21 16:55:56 make install
+   74  2019-03-21 17:08:10 cd mapping/on_the_fly/
+   75  2019-03-21 17:08:42 ls
+   76  2019-03-21 17:08:59 vi sub_write_geom_mapping.f90
+   77  2019-03-21 17:31:41 vi sub_write_geom_mapping.f90 sub_evolution_mapping_2_on_the_fly.f90 -O
+   78  2019-03-21 17:37:26 cd ../..
+   79  2019-03-21 17:37:30 make install
+   80  2019-03-21 17:39:49 cd mapping/on_the_fly/
+   81  2019-03-21 17:39:50 ls
+   82  2019-03-21 17:40:03 vi sub_evolution_mapping_2_on_the_fly.f90 sub_write_geom_mapping.f90 -O
+   83  2019-03-21 17:41:44 cd ../..
+   84  2019-03-21 17:41:48 make install
+   85  2019-03-21 17:46:21 ls
+   86  2019-03-21 17:47:30 cd mapping/on_the_fly/
+   87  2019-03-21 17:47:31 ls
+   88  2019-03-21 17:47:40 vi sub_evolution_mapping_2_on_the_fly.f90
+   89  2019-03-21 17:51:43 cd ../..
+   90  2019-03-21 17:51:48 make install
+   91  2019-03-21 18:02:19 cd mapping/on_the_fly/
+   92  2019-03-21 18:02:19 ls
+   93  2019-03-21 18:02:24 vi sub_write_geom_mapping.f90
+************************
+gg0110 nscc540_WJ
+    1  2019-03-21 21:54:13 cd hudp/cal/
+    2  2019-03-21 21:54:19 cd jade_mapping/
+    3  2019-03-21 21:54:20 ls
+    4  2019-03-21 22:01:12 cd src
+    5  2019-03-21 22:01:13 ls
+    6  2019-03-21 22:01:18 cd dynamics/
+    7  2019-03-21 22:01:21 cd mapping/
+    8  2019-03-21 22:01:23 cd adia/
+    9  2019-03-21 22:01:23 ls
+   10  2019-03-21 22:01:29 vi sub_p_to_p_kin.f90
+   11  2019-03-21 22:08:34 cd ../on_the_fly/
+   12  2019-03-21 22:08:34 ls
+   13  2019-03-21 22:08:39 vi sub_evolution_mapping_2_on_the_fly.f90
+************************
+gg0111 nscc540_WJ
+    1  2019-03-23 21:29:28 cd /home-gg/users/nscc540_WJ/hudp/cal/jade_mapping/src/
+    2  2019-03-23 21:29:31 cd dynamics/
+    3  2019-03-23 21:29:31 ls
+    4  2019-03-23 21:29:36 cd mapping/
+    5  2019-03-23 21:29:36 ls
+    6  2019-03-23 21:29:41 cd adia/
+    7  2019-03-23 21:29:42 ls
+    8  2019-03-23 21:29:47 vi sub_write_trj_2_adia.f90 
+    9  2019-03-23 21:30:39 cd ..
+   10  2019-03-23 21:30:46 ls
+   11  2019-03-23 21:30:56 make install
+   12  2019-03-23 22:12:33 cd mapping/
+   13  2019-03-23 22:12:34 ls
+   14  2019-03-23 22:12:36 cd adia/
+   15  2019-03-23 22:12:54 cd ../on_the_fly/
+   16  2019-03-23 22:12:57 vi sub_evolution_mapping_2_on_the_fly.f90 
+   17  2019-03-23 22:14:01 cd ../..
+   18  2019-03-23 22:14:05 make install
+   19  2019-03-23 22:25:29 vi mapping/on_the_fly/sub_evolution_mapping_2_on_the_fly.f90 
+   20  2019-03-23 22:38:39 cd mapping/on_the_fly/
+   21  2019-03-23 22:38:39 ls
+   22  2019-03-23 22:38:53 vi ../adia/sub_nuc_motion_2_aver_PES_adia.f90
+   23  2019-03-23 22:39:49 vi sub_write_trj_2_adia.f90
+   24  2019-03-23 22:39:53 ls
+   25  2019-03-23 22:39:58 vi sub_write_geom_mapping.f90
+   26  2019-03-23 22:43:00 vi sub_evolution_mapping_2_on_the_fly.f90
+   27  2019-03-23 22:44:30 cd ../..
+   28  2019-03-23 22:44:34 make install
+   29  2019-03-23 22:45:27 ls
+   30  2019-03-23 22:45:33 vi sub_write_current_geom.f90 
+   31  2019-03-23 22:45:55 grep write *
+   32  2019-03-23 22:46:05 rm usercmdlog 
+   33  2019-03-23 22:46:09 grep write *
+   34  2019-03-23 22:46:24 vi sub_zn_hopping.f90
+   35  2019-03-23 22:47:04 ls
+   36  2019-03-23 22:47:15 grep write sub_write_current_geom.f90
+   37  2019-03-23 22:47:36 grep write sub_many_ana_pes.f90
+   38  2019-03-23 22:47:47 vi sub_many_ana_pes.f90
+   39  2019-03-23 22:49:29 vi sub_many_ana_pes.f90 mapping/on_the_fly/sub_many_ana_pes_mapping.f90 -O
+   40  2019-03-23 22:52:41 make install 
+   41  2019-03-24 00:31:41 cd mapping/adia/
+   42  2019-03-24 00:31:45 cd ../on_the_fly/
+   43  2019-03-24 00:31:45 ls
+   44  2019-03-24 00:31:54 vi sub_write_geom_mapping.f90 
+************************
+gg0110 nscc540_WJ
+    1  2019-04-02 11:15:58 ls
+    2  2019-04-02 11:16:04 cd hudp/cal/
+    3  2019-04-02 11:16:04 ls
+    4  2019-04-02 11:16:07 cd jade_mapping/
+    5  2019-04-02 11:16:08 ls
+    6  2019-04-02 11:16:18 cd src/
+    7  2019-04-02 11:16:18 ls
+    8  2019-04-02 11:16:24 cd dynamics/
+    9  2019-04-02 11:16:25 ls
+   10  2019-04-02 11:16:32 cd mapping/
+   11  2019-04-02 11:16:33 ls
+   12  2019-04-02 11:16:36 cd on_the_fly/
+   13  2019-04-02 11:16:36 ls
+   14  2019-04-02 11:16:57 vi ../../main_sh.f90 
+   15  2019-04-02 11:30:09 vi sub_evolution_mapping_2_on_the_fly.f90 
+   16  2019-04-02 11:30:58 vi ../sub_read_control.f90 
+   17  2019-04-02 11:31:17 vi sub_evolution_mapping_2_on_the_fly.f90 
+   18  2019-04-02 11:32:29 vi sub_read_current_geom_mapping.f90 
+   19  2019-04-02 11:33:28 vi sub_evolution_mapping_2_on_the_fly.f90 
+   20  2019-04-02 11:34:28 vi sub_read_current_geom_mapping.f90 

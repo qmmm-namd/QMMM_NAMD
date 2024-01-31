@@ -1,0 +1,312 @@
+ Entering Gaussian System, Link 0=g09
+ Input=ok.gjf
+ Output=ok.log
+ Initial command:
+ /opt/g09_D01_em64t/g09/l1.exe "/tmp/Gau-28372.inp" -scrdir="/tmp/"
+ Entering Link 1 = /opt/g09_D01_em64t/g09/l1.exe PID=     28373.
+  
+ Copyright (c) 1988,1990,1992,1993,1995,1998,2003,2009,2013,
+            Gaussian, Inc.  All Rights Reserved.
+  
+ This is part of the Gaussian(R) 09 program.  It is based on
+ the Gaussian(R) 03 system (copyright 2003, Gaussian, Inc.),
+ the Gaussian(R) 98 system (copyright 1998, Gaussian, Inc.),
+ the Gaussian(R) 94 system (copyright 1995, Gaussian, Inc.),
+ the Gaussian 92(TM) system (copyright 1992, Gaussian, Inc.),
+ the Gaussian 90(TM) system (copyright 1990, Gaussian, Inc.),
+ the Gaussian 88(TM) system (copyright 1988, Gaussian, Inc.),
+ the Gaussian 86(TM) system (copyright 1986, Carnegie Mellon
+ University), and the Gaussian 82(TM) system (copyright 1983,
+ Carnegie Mellon University). Gaussian is a federally registered
+ trademark of Gaussian, Inc.
+  
+ This software contains proprietary and confidential information,
+ including trade secrets, belonging to Gaussian, Inc.
+  
+ This software is provided under written license and may be
+ used, copied, transmitted, or stored only in accord with that
+ written license.
+  
+ The following legend is applicable only to US Government
+ contracts under FAR:
+  
+                    RESTRICTED RIGHTS LEGEND
+  
+ Use, reproduction and disclosure by the US Government is
+ subject to restrictions as set forth in subparagraphs (a)
+ and (c) of the Commercial Computer Software - Restricted
+ Rights clause in FAR 52.227-19.
+  
+ Gaussian, Inc.
+ 340 Quinnipiac St., Bldg. 40, Wallingford CT 06492
+  
+  
+ ---------------------------------------------------------------
+ Warning -- This program may not be used in any manner that
+ competes with the business of Gaussian, Inc. or will provide
+ assistance to any competitor of Gaussian, Inc.  The licensee
+ of this program is prohibited from giving any competitor of
+ Gaussian, Inc. access to this program.  By using this program,
+ the user acknowledges that Gaussian, Inc. is engaged in the
+ business of creating and licensing software in the field of
+ computational chemistry and represents and warrants to the
+ licensee that it is not a competitor of Gaussian, Inc. and that
+ it will not use this program in any manner prohibited above.
+ ---------------------------------------------------------------
+  
+
+ Cite this work as:
+ Gaussian 09, Revision D.01,
+ M. J. Frisch, G. W. Trucks, H. B. Schlegel, G. E. Scuseria, 
+ M. A. Robb, J. R. Cheeseman, G. Scalmani, V. Barone, B. Mennucci, 
+ G. A. Petersson, H. Nakatsuji, M. Caricato, X. Li, H. P. Hratchian, 
+ A. F. Izmaylov, J. Bloino, G. Zheng, J. L. Sonnenberg, M. Hada, 
+ M. Ehara, K. Toyota, R. Fukuda, J. Hasegawa, M. Ishida, T. Nakajima, 
+ Y. Honda, O. Kitao, H. Nakai, T. Vreven, J. A. Montgomery, Jr., 
+ J. E. Peralta, F. Ogliaro, M. Bearpark, J. J. Heyd, E. Brothers, 
+ K. N. Kudin, V. N. Staroverov, T. Keith, R. Kobayashi, J. Normand, 
+ K. Raghavachari, A. Rendell, J. C. Burant, S. S. Iyengar, J. Tomasi, 
+ M. Cossi, N. Rega, J. M. Millam, M. Klene, J. E. Knox, J. B. Cross, 
+ V. Bakken, C. Adamo, J. Jaramillo, R. Gomperts, R. E. Stratmann, 
+ O. Yazyev, A. J. Austin, R. Cammi, C. Pomelli, J. W. Ochterski, 
+ R. L. Martin, K. Morokuma, V. G. Zakrzewski, G. A. Voth, 
+ P. Salvador, J. J. Dannenberg, S. Dapprich, A. D. Daniels, 
+ O. Farkas, J. B. Foresman, J. V. Ortiz, J. Cioslowski, 
+ and D. J. Fox, Gaussian, Inc., Wallingford CT, 2013.
+ 
+ ******************************************
+ Gaussian 09:  EM64L-G09RevD.01 24-Apr-2013
+                23-Mar-2015 
+ ******************************************
+ %chk=ok.chk
+ -------------------------------------------------------------------
+ # oniom(B3LYP/6-31g**:uff)=(embed,onlyinputfiles) geom=connectivity
+ -------------------------------------------------------------------
+ 1/38=1,52=12,56=1,57=2,61=3,64=2,74=500/1;
+ 2/12=2,17=6,18=5,40=1/2;
+ 1/38=1,52=12,53=3172,61=3,64=2,74=500,118=2/20;
+ 1/52=12,53=2032,61=3,74=500,118=2/20;
+ 1/52=12,53=1022,61=3,64=2,74=500,118=2/20;
+ 99/5=1,9=1/99;
+ ONIOM: restoring gridpoint  3 on chk file.
+ -------------------
+ Title Card Required
+ -------------------
+ Symbolic Z-matrix:
+ Charge =  0 Multiplicity = 2 for low   level calculation on real  system.
+ Charge =  0 Multiplicity = 1 for high  level calculation on model system.
+ Charge =  0 Multiplicity = 1 for low   level calculation on model system.
+ C-C_3(PDBName=C,ResName=A,ResNum=0) 0     1.988     0.087    -0.874    H 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     2.343     0.591     0.001    H 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     2.346     0.592    -1.746    H 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     0.918     0.087    -0.876    H 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     2.345    -0.922    -0.874    L    H-H_     1     0.        0. 
+ C-C_3(PDBName=C,ResName=A,ResNum=0) 0     2.701    -1.931    -0.874    L 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     3.771    -1.931    -0.874    L 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     2.345    -2.435    -1.747    L 
+ H-H_(PDBName=H,ResName=A,ResNum=0) 0     2.345    -2.435     0.       L 
+ 
+ Warning:  atom H5 in layer R is uses the same element as its link atom.
+ I=    5 IAn=  1 Valence= 2.
+          JB=  1 J=    1 IAn=  6 IBT= 1 Dist= 1.07D+00
+          JB=  2 J=    6 IAn=  6 IBT= 1 Dist= 1.07D+00
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+ Layer 1 (S) has      5 atoms and charge   0.00000000 sum=   0.00000000
+ Layer 2 (R) adds     4 atoms and charge   0.00000000 sum=   0.00000000
+ Residue   1 PDB Number     0   A   has     9 atoms, and a charge of   0.00000000
+ MMInit generated parameter data with length LenPar=        1174.
+ Center=      2.34466667     -0.92188889     -0.87377778
+ Residue   1 PDB Number     0   A   charge    0.00000000 layers M R      AvRTP=      0.00000000      0.00000000      0.00000000
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6    10061003        1.988000    0.087000   -0.874000
+      2          1    10011000        2.343000    0.591000    0.001000
+      3          1    10011000        2.346000    0.592000   -1.746000
+      4          1    10011000        0.918000    0.087000   -0.876000
+      5          1    10011000        2.345000   -0.922000   -0.874000
+      6          6    10061003        2.701000   -1.931000   -0.874000
+      7          1    10011000        3.771000   -1.931000   -0.874000
+      8          1    10011000        2.345000   -2.435000   -1.747000
+      9          1    10011000        2.345000   -2.435000    0.000000
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  C    0.000000
+     2  H    1.070358   0.000000
+     3  H    1.069380   1.747003   0.000000
+     4  H    1.070002   1.747504   1.746742   0.000000
+     5  H    1.070294   1.747798   1.747164   1.747688   0.000000
+     6  C    2.140255   2.693376   2.692942   2.692846   1.069961
+     7  H    2.692845   3.027423   3.025977   3.494558   1.746871
+     8  H    2.692594   3.494594   3.027000   3.025798   1.746796
+     9  H    2.692918   3.026001   3.494459   3.027241   1.747296
+                    6          7          8          9
+     6  C    0.000000
+     7  H    1.070000   0.000000
+     8  H    1.069056   1.746316   0.000000
+     9  H    1.069873   1.746817   1.747000   0.000000
+ Stoichiometry    C2H7(2)
+ Framework group  C1[X(C2H7)]
+ Deg. of freedom    21
+ Full point group                 C1      NOp   1
+ Largest Abelian subgroup         C1      NOp   1
+ Largest concise Abelian subgroup C1      NOp   1
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6    10061003        1.070104   -0.000094    0.000059
+      2          1    10011000        1.426997    0.986953    0.209893
+      3          1    10011000        1.426936   -0.674751    0.749113
+      4          1    10011000        1.426674   -0.311644   -0.959472
+      5          1    10011000       -0.000190    0.000016    0.000393
+      6          6    10061003       -1.070151   -0.000163   -0.000169
+      7          1    10011000       -1.426720    0.309483    0.959976
+      8          1    10011000       -1.426711   -0.985596   -0.211515
+      9          1    10011000       -1.426707    0.677079   -0.747725
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):     82.1613051     11.7888599     11.7886087
+ ONIOM: Cut between H /H     5 and C     1 factor= 1.000000 1.000000
+ ONIOM: saving gridpoint 17
+ ONIOM: restoring gridpoint  3 on chk file.
+ ONIOM: generating point  3 -- low level on real system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ Title Card Required
+ Point  3 -- low level on real system.
+
+ 0,2
+  C-C_3(PDBName=C,ResName=A,ResNum=0)               1.070104357867     -0.000094183110      0.000058602921
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426997127783      0.986953376295      0.209893457642
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426936386932     -0.674751059724      0.749112674314
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426673855051     -0.311643599968     -0.959472092019
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -0.000189936092      0.000016282432      0.000393439827
+  C-C_3(PDBName=C,ResName=A,ResNum=0)              -1.070150987527     -0.000162640769     -0.000169054631
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -1.426720489123      0.309483313144      0.959975504150
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -1.426710510505     -0.985596125970     -0.211515104556
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -1.426706656087      0.677078757063     -0.747725169100
+
+ 1 2 1.000 3 1.000 4 1.000 5 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 1 1.000
+ 5 1 1.000 6 1.000
+ 6 5 1.000 7 1.000 8 1.000 9 1.000
+ 7 6 1.000
+ 8 6 1.000
+ 9 6 1.000
+ 
+
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  3
+ ONIOM: restoring gridpoint 17
+ ONIOM: restoring gridpoint  2 on chk file.
+ ONIOM: generating point  2 -- high level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) B3LYP/6-31G**
+
+ Title Card Required
+ Point  2 -- high level on model system.
+
+ 0,1
+  C-C_3(PDBName=C,ResName=A,ResNum=0)               1.070104357867     -0.000094183110      0.000058602921
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426997127783      0.986953376295      0.209893457642
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426936386932     -0.674751059724      0.749112674314
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426673855051     -0.311643599968     -0.959472092019
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -0.000189936092      0.000016282432      0.000393439827
+  C-#6(PDBName=C,ResName=A,ResNum=0)               -1.070150987527     -0.000162640769     -0.000169054631
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426720489123      0.309483313144      0.959975504150
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426710510505     -0.985596125970     -0.211515104556
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426706656087      0.677078757063     -0.747725169100
+
+ 1 2 1.000 3 1.000 4 1.000 5 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 1 1.000
+ 5 1 1.000 6 1.000
+ 6 5 1.000 7 1.000 8 1.000 9 1.000
+ 7 6 1.000
+ 8 6 1.000
+ 9 6 1.000
+ 
+
+ --------------------------------------------------------------------------------
+
+ ONIOM: saving gridpoint  2
+ ONIOM: restoring gridpoint 17
+ ONIOM: generating point  1 -- low level on model system.
+ ChrgS2: IScale=     5     5     5     5     0     0 (distance 6..1 bonds)
+ ChrgS2:  Scale=  1.00  1.00  1.00  1.00  0.00  0.00 (distance 6..1 bonds)
+ Generating MM parameters for model system.
+ Include all MM classes
+
+ MM sanity checks:
+ All charges sum to:                0.00000000
+ Charges of atoms sum to:           0.00000000
+       4 point charges sum to:      0.00000000
+ Residue   1 PDB Number     0   A   has     5 atoms, and a charge of   0.00000000
+ MMInit generated parameter data with length LenPar=         822.
+
+ --------------------------------------------------------------------------------
+ #P Test IOp(2/15=1,5/32=2,5/38=1) UFF
+
+ Title Card Required
+ Point  1 -- low level on model system.
+
+ 0,1
+  C-C_3(PDBName=C,ResName=A,ResNum=0)               1.070104357867     -0.000094183110      0.000058602921
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426997127783      0.986953376295      0.209893457642
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426936386932     -0.674751059724      0.749112674314
+  H-H_(PDBName=H,ResName=A,ResNum=0)                1.426673855051     -0.311643599968     -0.959472092019
+  H-H_(PDBName=H,ResName=A,ResNum=0)               -0.000189936092      0.000016282432      0.000393439827
+  C-#6(PDBName=C,ResName=A,ResNum=0)               -1.070150987527     -0.000162640769     -0.000169054631
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426720489123      0.309483313144      0.959975504150
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426710510505     -0.985596125970     -0.211515104556
+  H-#6(PDBName=H,ResName=A,ResNum=0)               -1.426706656087      0.677078757063     -0.747725169100
+
+ 1 2 1.000 3 1.000 4 1.000 5 1.000
+ 2 1 1.000
+ 3 1 1.000
+ 4 1 1.000
+ 5 1 1.000 6 1.000
+ 6 5 1.000 7 1.000 8 1.000 9 1.000
+ 7 6 1.000
+ 8 6 1.000
+ 9 6 1.000
+ 
+
+ --------------------------------------------------------------------------------
+
+ 1\1\GINC-EAM\SP\ONIOM(B3LYP/6-31G(d,p):UFF)\Mixed\C2H7(2)\DULIKAI\23-M
+ ar-2015\0\\# oniom(B3LYP/6-31g**:uff)=(embed,onlyinputfiles) geom=conn
+ ectivity\\Title Card Required\\0,1\C,0,1.988,0.087,-0.874\H,0,2.343,0.
+ 591,0.001\H,0,2.346,0.592,-1.746\H,0,0.918,0.087,-0.876\H,0,2.345,-0.9
+ 22,-0.874\C,0,2.701,-1.931,-0.874\H,0,3.771,-1.931,-0.874\H,0,2.345,-2
+ .435,-1.747\H,0,2.345,-2.435,0.\\Version=EM64L-G09RevD.01\HF=0.\S2=0.\
+ S2-1=0.\S2A=0.\RMSD=0.000e+00\PG=C01 [X(C2H7)]\\@
+
+
+ ERWIN WITH HIS PSI CAN DO
+ CALCULATIONS QUITE A FEW.
+ BUT ONE THING HAS NOT BEEN SEEN
+ JUST WHAT DOES PSI REALLY MEAN.
+ -- WALTER HUCKEL, TRANS. BY FELIX BLOCH
+ Job cpu time:       0 days  0 hours  0 minutes  0.2 seconds.
+ File lengths (MBytes):  RWF=      5 Int=      0 D2E=      0 Chk=      1 Scr=      1
+ Normal termination of Gaussian 09 at Mon Mar 23 14:43:25 2015.

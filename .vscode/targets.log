@@ -1,0 +1,329 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.82
+# Built for x86_64-redhat-linux-gnu
+# Copyright (C) 2010  Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Apr 13 10:01:18 2023
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# environment
+QTDIR = /usr/lib64/qt-3.3
+# environment
+VSCODE_AGENT_FOLDER = /share/home/huanghy/.vscode-server
+# environment
+MODULEPATH = /usr/share/Modules/modulefiles:/etc/modulefiles
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+HARDWARE_PLATFORM = x86_64
+# environment
+python_local = /public/home/huanghy/bin/Python-3.9.4/local/bin
+# environment
+jade_py = /share/home/huanghy/huanghy/bin/jade_mapping/contrib
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# default
+MAKE_VERSION := 3.82
+# makefile
+CURDIR := /public/home/huanghy/bin/jade_mapping_test
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"b8e8c951dd5b5f651e028f8bda5e81eb.zh-cn","_translationsConfigFile":"/share/home/huanghy/.vscode-server/data/clp/b8e8c951dd5b5f651e028f8bda5e81eb.zh-cn/tcf.json","_cacheRoot":"/share/home/huanghy/.vscode-server/data/clp/b8e8c951dd5b5f651e028f8bda5e81eb.zh-cn","_resolvedLanguagePackCoreLocation":"/share/home/huanghy/.vscode-server/data/clp/b8e8c951dd5b5f651e028f8bda5e81eb.zh-cn/441438abd1ac652551dbe4d408dfcec8a499b8bf","_corruptedFile":"/share/home/huanghy/.vscode-server/data/clp/b8e8c951dd5b5f651e028f8bda5e81eb.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+INTEL_LICENSE_FILE = /share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses:/share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses:/share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses:/share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses:/share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses:/share/intel/composer_xe_2015.6.233/licenses:/opt/intel/licenses:/share/home/huanghy/intel/licenses
+# environment
+_ = /usr/bin/make
+# environment
+jade_mapping = /public/home/huanghy/bin/jade_mapping
+# environment
+GDB_HOST = /share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin/gdb-ia-mic
+# makefile
+MAKEFILE_LIST := 
+# environment
+pythonkit = /public/home/huanghy/bin/pythonkit
+# environment
+TBBROOT = /share/intel/composer_xe_2015.6.233/tbb
+# environment
+XDG_DATA_DIRS = /share/home/huanghy/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+# environment
+QT_PLUGIN_PATH = /usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+# environment
+INFOPATH = /share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/info/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/info/
+# environment
+CUDA_HOME = /share/home/huanghy/bin/cuda-11.1
+# environment
+MPM_LAUNCHER = /share/intel/composer_xe_2015.6.233/debugger/mpm/bin/start_mpm.sh
+# environment
+LESSOPEN = ||/usr/bin/lesspipe.sh %s
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# environment
+VSCODE_CWD = /share/home/huanghy
+# environment
+HISTCONTROL = ignoredups
+# environment
+SSH_CONNECTION = 192.168.5.207 61407 192.168.5.200 22
+# environment
+PATH = /share/home/huanghy/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/bin/remote-cli:/share/home/huanghy/bin/molpro_2022.1/bin:/share/home/huanghy/bin/amber20/bin:/share/home/huanghy/bin/chemsh-3.7.0/bin:/share/home/huanghy/bin/chemsh-3.7.0/scripts:/share/home/huanghy/bin/vmd-1.9.3/usr/local/bin:/share/home/huanghy/bin/grace-5.1.25/usr/local/grace/bin:/share/home/huanghy/huanghy/bin/rmsd:/share/home/huanghy/huanghy/bin/jade_mapping/contrib:/public/home/huanghy/bin/molden6.7/bin:/share/intel//impi/5.0.3.049/intel64/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/public/home/huanghy/bin/Multiwfn_3.8_dev_bin_Linux:/public/home/huanghy/bin/mndo2020/local/bin:/public/home/huanghy/bin/Python-3.9.4/local/bin:/share/home/huanghy/bin/pythonkit/molpro:/share/home/huanghy/huanghy/bin/pythonkit/mndo/format_change:/public/home/huanghy/bin/pythonkit:/share/bin:/share/home/huanghy/anaconda3/condabin:/share/home/huanghy/bin/molpro_2022.1/bin:/share/home/huanghy/bin/amber20/bin:/share/home/huanghy/bin/chemsh-3.7.0/bin:/share/home/huanghy/bin/chemsh-3.7.0/scripts:/share/home/huanghy/bin/vmd-1.9.3/usr/local/bin:/share/home/huanghy/bin/grace-5.1.25/usr/local/grace/bin:/share/home/huanghy/huanghy/bin/rmsd:/share/home/huanghy/huanghy/bin/jade_mapping/contrib:/public/home/huanghy/bin/molden6.7/bin:/share/intel//impi/5.0.3.049/intel64/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/public/home/huanghy/bin/Multiwfn_3.8_dev_bin_Linux:/public/home/huanghy/bin/mndo2020/local/bin:/public/home/huanghy/bin/Python-3.9.4/local/bin:/share/home/huanghy/bin/pythonkit/molpro:/share/home/huanghy/huanghy/bin/pythonkit/mndo/format_change:/public/home/huanghy/bin/pythonkit:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/share/home/huanghy/bin/cuda-11.1/bin:/share/home/huanghy/bin/Python-3.11.0/usr/local/bin:/share/home/huanghy/bin/bagel_install/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:/share/home/huanghy/bin/cuda-11.1/bin:/share/home/huanghy/bin/Python-3.11.0/usr/local/bin:/share/home/huanghy/bin/bagel_install/bin:/share/home/huanghy/bin:/public/home/huanghy/bin/NEWTON-X/bin
+# environment
+TCLROOT = /share/home/huanghy/bin/tcl8.5.11
+# environment
+QT_GRAPHICSSYSTEM_CHECKED = 1
+# environment
+format = /share/home/huanghy/huanghy/bin/pythonkit/mndo/format_change
+# environment
+XDG_RUNTIME_DIR = /run/user/596
+# environment
+LIBRARY_PATH = /share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4
+# environment
+INTEL_PYTHONHOME = /share/intel/composer_xe_2015.6.233/debugger/python/intel64/
+# environment
+CPATH = /share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include:/share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include:/share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include:/share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include:/share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include:/share/intel/composer_xe_2015.6.233/ipp/include:/share/intel/composer_xe_2015.6.233/mkl/include:/share/intel/composer_xe_2015.6.233/tbb/include
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver check-symlink
+# environment
+MIC_LIBRARY_PATH = /share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic
+# automatic
+%F = $(notdir $%)
+# environment
+KDEDIRS = /usr
+# environment
+CONDA_EXE = /share/home/huanghy/anaconda3/bin/conda
+# environment
+HISTFILESIZE = 100000
+# environment
+PWD = /public/home/huanghy/bin/jade_mapping_test
+# environment
+VSCODE_IPC_HOOK_CLI = /run/user/596/vscode-ipc-b894d2b4-e30f-454e-9c43-7cc2b93186a0.sock
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+HISTTIMEFORMAT = %F %T 
+# environment
+MANPATH = /share/intel//impi/5.0.3.049/man:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/:/share/intel//impi/5.0.3.049/man:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/man/en_US:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/man/:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/man/::::::
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /share/home/huanghy
+# environment
+LD_LIBRARY_PATH = /share/home/huanghy/bin/boost_install/lib:/share/home/huanghy/bin/amber20/lib:/share/intel//impi/5.0.3.049/intel64/lib:/share/intel//impi/5.0.3.049/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/intel//impi/5.0.3.049/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/intel//impi/5.0.3.049/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/home/huanghy/bin/boost_install/lib:/share/home/huanghy/bin/amber20/lib:/share/intel//impi/5.0.3.049/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mpirt/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/../compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64:/share/intel/composer_xe_2015.6.233/ipp/tools/intel64/perfsys:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64:/share/intel/composer_xe_2015.6.233/tbb/lib/intel64/gcc4.4:/share/intel/composer_xe_2015.6.233/debugger/libipt/intel64/lib:/share/home/huanghy/bin/tcl8.5.11/lib:/share/home/huanghy/bin/cuda-11.1/lib64:/share/home/huanghy/bin/bagel_install/lib:/share/home/huanghy/bin/tcl8.5.11/lib:/share/home/huanghy/bin/cuda-11.1/lib64:/share/home/huanghy/bin/bagel_install/lib
+# environment
+mndo2020 = /public/home/huanghy/bin/mndo2020/local/bin
+# environment
+PERL5LIB = /share/home/huanghy/bin/amber20/lib/perl:/share/home/huanghy/bin/amber20/lib/perl
+# environment
+MODULESHOME = /usr/share/Modules
+# environment
+LOGNAME = huanghy
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+HOSTNAME = comp2
+# environment
+MIC_LD_LIBRARY_PATH = /share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mpirt/lib/mic:/share/intel/composer_xe_2015.6.233/compiler/lib/mic:/share/intel/composer_xe_2015.6.233/mkl/lib/mic:/share/intel/composer_xe_2015.6.233/tbb/lib/mic
+# environment
+MAKELEVEL := 0
+# environment
+PATTH = /share/home/huanghy/bin/molpro_2022.1/bin:/share/home/huanghy/bin/amber20/bin:/share/home/huanghy/bin/chemsh-3.7.0/bin:/share/home/huanghy/bin/chemsh-3.7.0/scripts:/share/home/huanghy/bin/vmd-1.9.3/usr/local/bin:/share/home/huanghy/bin/grace-5.1.25/usr/local/grace/bin:/share/home/huanghy/huanghy/bin/rmsd:/share/home/huanghy/huanghy/bin/jade_mapping/contrib:/public/home/huanghy/bin/molden6.7/bin:/share/intel//impi/5.0.3.049/intel64/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/public/home/huanghy/bin/Multiwfn_3.8_dev_bin_Linux:/public/home/huanghy/bin/mndo2020/local/bin:/public/home/huanghy/bin/Python-3.9.4/local/bin:/share/home/huanghy/bin/pythonkit/molpro:/share/home/huanghy/huanghy/bin/pythonkit/mndo/format_change:/public/home/huanghy/bin/pythonkit:/share/bin:/share/home/huanghy/anaconda3/condabin:/share/home/huanghy/bin/molpro_2022.1/bin:/share/home/huanghy/bin/amber20/bin:/share/home/huanghy/bin/chemsh-3.7.0/bin:/share/home/huanghy/bin/chemsh-3.7.0/scripts:/share/home/huanghy/bin/vmd-1.9.3/usr/local/bin:/share/home/huanghy/bin/grace-5.1.25/usr/local/grace/bin:/share/home/huanghy/huanghy/bin/rmsd:/share/home/huanghy/huanghy/bin/jade_mapping/contrib:/public/home/huanghy/bin/molden6.7/bin:/share/intel//impi/5.0.3.049/intel64/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/share/intel/composer_xe_2015.6.233/bin/intel64:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin:/public/home/huanghy/bin/Multiwfn_3.8_dev_bin_Linux:/public/home/huanghy/bin/mndo2020/local/bin:/public/home/huanghy/bin/Python-3.9.4/local/bin:/share/home/huanghy/bin/pythonkit/molpro:/share/home/huanghy/huanghy/bin/pythonkit/mndo/format_change:/public/home/huanghy/bin/pythonkit:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/share/home/huanghy/bin/cuda-11.1/bin:/share/home/huanghy/bin/Python-3.11.0/usr/local/bin:/share/home/huanghy/bin/bagel_install/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:/share/home/huanghy/bin/cuda-11.1/bin:/share/home/huanghy/bin/Python-3.11.0/usr/local/bin:/share/home/huanghy/bin/bagel_install/bin:/share/home/huanghy/bin:/public/home/huanghy/bin/NEWTON-X/bin:/public/home/huanghy/bin/jade_mapping
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 5
+# environment
+NX = /public/home/huanghy/bin/NEWTON-X/bin
+# environment
+Multiwfnpath = /public/home/huanghy/bin/Multiwfn_3.8_dev_bin_Linux
+# environment
+BOOST_ROOT = /share/home/huanghy/bin/boost_install
+# environment
+XDG_SESSION_ID = 6738
+# environment
+AMBERHOME = /share/home/huanghy/bin/amber20
+# environment
+USER = huanghy
+# environment
+MKLROOT = /share/intel/composer_xe_2015.6.233/mkl
+# environment
+QTLIB = /usr/lib64/qt-3.3/lib
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+define BASH_FUNC_module()
+() {  eval `/usr/bin/modulecmd bash $*`
+}
+endef
+# environment
+CONDA_SHLVL = 0
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PYTHONPATH = /share/home/huanghy/bin/amber20/lib/python3.9/site-packages:/share/home/huanghy/bin/amber20/lib/python3.9/site-packages
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# environment
+SSH_CLIENT = 192.168.5.207 61407 22
+# environment
+MAIL = /var/spool/mail/huanghy
+# environment
+GDB_CROSS = /share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/bin/gdb-mic
+# environment
+LOADEDMODULES = 
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+rmsd = /share/home/huanghy/huanghy/bin/rmsd
+# environment
+KMP_STACKSIZE = 200M
+# environment
+BROWSER = /share/home/huanghy/.vscode-server/bin/441438abd1ac652551dbe4d408dfcec8a499b8bf/bin/helpers/browser.sh
+# environment
+I_MPI_ROOT = /share/intel//impi/5.0.3.049
+# environment
+IPPROOT = /share/intel/composer_xe_2015.6.233/ipp
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /share/home/huanghy/anaconda3/bin/python
+# environment
+PDSH_RCMD_TYPE = ssh
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+HISTSIZE = 1000
+# environment
+_CE_M = 
+# environment
+NLSPATH = /share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/compiler/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/ipp/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/mkl/lib/intel64/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64_mic/share/locale/%l_%t/%N:/share/intel/composer_xe_2015.6.233/debugger/gdb/intel64/share/locale/%l_%t/%N
+# environment
+molden = /public/home/huanghy/bin/molden6.7/bin
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+QTINC = /usr/lib64/qt-3.3/include
+# default
+.RECIPEPREFIX := 
+# makefile
+.DEFAULT_GOAL := 
+# environment
+chemshell = /share/home/huanghy/bin/chemsh-3.7.0
+# environment
+LANG = C
+# environment
+ 
+make: *** No rule to make target `all'.  Stop.
+
+GDBSERVER_MIC = /share/intel/composer_xe_2015.6.233/debugger/gdb/target/mic/bin/gdbserver
+# environment
+_CE_CONDA = 
+# variable set hash-table stats:
+# Load=117/1024=11%, Rehash=0, Collisions=12/136=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 40, inode 58311841): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 0 / lookups = 22 / hits = 22
+# # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
+# strcache used: total = 0 (152) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (8024) / max = 0 / min = 8176 / avg = 0
+
+# strcache hash-table stats:
+# Load=19/8192=0%, Rehash=0, Collisions=1/22=5%
+# Finished Make data base on Thu Apr 13 10:01:18 2023
+
+ 

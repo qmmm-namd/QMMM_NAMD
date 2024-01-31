@@ -1,0 +1,6 @@
+qm_mm_top = qm_mm.top 
+qm_mm_crd = qm_mm.rst7
+
+qm_mask = :1
+fro_mask = @1>:15.0 
+

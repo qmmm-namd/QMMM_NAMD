@@ -1,0 +1,29 @@
+******************************************
+
+the QM/MM-NAMD Program
+
+an on-the-fly QM/MM surface hopping code for complex large systems 
+
+Copyright (c) 2023 
+
+******************************************
+
+The QM/MM-NAMD Program & related tools has been developed by
+
+Haiyi Huang(202331150035@mail.bnu.edu.cn), Zhenggang Lan* (zhenggang.lan@m.scnu.edu.cn), Chao Xu*(chaoxu@m.scnu.edu.cn)
+
+Contact info:
+Prof. Dr. Chao Xu
+e-mail: chaoxu@m.scnu.edu.cn
+Prof. Dr. Zhenggang Lan
+e-mail: zhenggang.lan@m.scnu.edu.cn
+
+
+with contributions by
+
+Jiawei Peng
+Jun Wang 
+Jing Huang 
+Deping Hu 
+Likai Du
+--------------------------------
